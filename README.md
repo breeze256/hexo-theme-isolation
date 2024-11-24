@@ -1,2 +1,2 @@
-# Isolation for Hexo
+# Flat for Hexo
 > WORK IN PROGRESS
