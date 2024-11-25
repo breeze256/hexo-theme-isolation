@@ -1,7 +1,7 @@
 {
   "name": "hexo-theme-flat",
   "version": "0.0.1",
-  "description": "A Hexo theme aims to isolate your focus onto writing. Boosted with Material Design Lite.",
+  "description": "A Hexo theme aims to isolate your focus onto writing.",
   "main": "package.json",
   "files": [
     "docs",
@@ -21,7 +21,7 @@
     "material",
     "flat"
   ],
-  "author": "",
+  "author": "breeze256",
   "license": "MIT",
   "devDependencies": {
     "c8": "10.1.2",
