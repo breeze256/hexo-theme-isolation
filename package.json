@@ -1,0 +1,38 @@
+{
+  "name": "hexo-theme-flat",
+  "version": "0.0.1",
+  "description": "A Hexo theme aims to isolate your focus onto writing. Boosted with Material Design Lite.",
+  "main": "package.json",
+  "files": [
+    "docs",
+    "languages",
+    "layout",
+    "scripts",
+    "source",
+    "_config.yml",
+    "_vendors.yml"
+  ],
+  "scripts": {
+    "test": "mocha test/index.js"
+  },
+  "repository": "breeze256/hexo-theme-flat",
+  "keywords": [
+    "hexo",
+    "theme",
+    "material",
+    "flat"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "c8": "10.1.2",
+    "chai": "4.5.0",
+    "eslint": "9.14.0",
+    "hexo": "7.3.0",
+    "hexo-renderer-markdown-it": "6.3.0",
+    "js-yaml": "4.1.0",
+    "mocha": "10.8.2",
+    "stylelint": "16.10.0",
+    "stylelint-stylus": "1.0.0"
+  }
+}
