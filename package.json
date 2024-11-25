@@ -9,8 +9,7 @@
     "layout",
     "scripts",
     "source",
-    "_config.yml",
-    "_vendors.yml"
+    "_config.yml"
   ],
   "scripts": {
     "test": "mocha test/index.js"
