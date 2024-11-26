@@ -1,0 +1,5 @@
+# Assets
+assets:
+  css: stylesheets
+  js: javascripts
+  imgs: images

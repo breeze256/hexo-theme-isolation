@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/vendors/material.css">
+    {{ partial('_partials/head.njk', {}, {cache: theme.cache.enable}) }}
 </head>
-<body>
-    <pre>Hello, world</pre>
-    <p>中文测试</p>
-    <button class="mdl-button">BUTTON</button>
+<style>
+    body {
+        background-color: #F5F5F5;
+    }
+</style>
+<body itemscope itemtype="http://schema.org/WebPage">
+    <div class="material-layout mdl-js-layout has-drawer is-upgraded">
+        <pre>Hello, world</pre>
+        <p>中文测试</p>
+        <button class="mdl-button">BUTTON</button>
+    </div>
 </body>
 </html>
