@@ -1,3 +1,9 @@
-<meta charset="utf-8">
-<link rel="stylesheet" href="{{ url_for(theme.assets.css) }}/main.css">
-<script src="{{ url_for(theme.assets.js) }}/third-party/material.min.js"></script>
+<meta charset="UTF-8">
+
+<!-- Load vendors assets. -->
+<link rel="stylesheet" href="{{ url_for(theme.assets.css) }}/vendors/material.min.css">
+<script src="{{ url_for(theme.assets.js) }}/vendors/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<!-- Load common assets. -->
+<link rel="stylesheet" href="{{ url_for(theme.assets.css) }}/common.css">

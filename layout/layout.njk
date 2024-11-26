@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
+
 <head>
-    {{ partial('_partials/head.njk', {}, {cache: theme.cache.enable}) }}
+    {{ partial("_partials/head.njk", {}, {cache: theme.cache.enable}) }}
+    <title>{{ config.title }}</title>
 </head>
-<style>
-    body {
-        background-color: #F5F5F5;
-    }
-</style>
+
 <body itemscope itemtype="http://schema.org/WebPage">
     <div class="material-layout mdl-js-layout has-drawer is-upgraded">
-        <pre>Hello, world</pre>
-        <p>中文测试</p>
+        <pre>There is layout.njk.</pre>
+        <p>中文测试 Chinese Testing(UTF-8)</p>
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">BUTTON</button>
 
-        
+        <!-- Accent-colored raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        Button
+        </button>
     </div>
+    
+    {% include "index.njk" %}
+    {% include "post.njk" %}
 </body>
+
 </html>
