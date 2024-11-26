@@ -3,3 +3,6 @@ assets:
   css: stylesheets
   js: javascripts
   imgs: images
+
+cache:
+  enable: true
