@@ -1,1 +1,21 @@
 <pre>There is index.njk.</pre>
+
+{% block content %}
+
+    {%- for post in page.posts.toArray() %}
+        {{ post.path }}
+        <br />
+        {{ post.slug }}
+        <br />
+        {{ post._id }}
+        <br />
+        {{ post.title }}
+        <br />
+        {{ post.date }}
+        <br />
+
+        <a href="/{{ post.path }}">{{ post.title }}</a>
+    {%- endfor %}
+
+{% endblock %}
+
