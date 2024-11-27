@@ -1,3 +1,7 @@
-<pre>There is post.njk.</pre>
+{% extends "_layout.njk" %}
 
-{{ page.content }}
+{% block content %}
+    <pre>There is post.njk.</pre>
+
+    {{ page.content }}
+{% endblock %}

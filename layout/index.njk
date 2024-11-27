@@ -1,6 +1,8 @@
-<pre>There is index.njk.</pre>
+{% extends "_layout.njk" %}
 
 {% block content %}
+
+    <pre>There is index.njk.</pre>
 
     {%- for post in page.posts.toArray() %}
         {{ post.path }}
