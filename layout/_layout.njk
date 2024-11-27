@@ -1,49 +1,42 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
 
-<head>
-    {{ partial("_partials/head.njk", {}, {cache: theme.cache.enable}) }}
-    <title>{{ config.title }}</title>
-</head>
+    <head>
+        {{ partial("_partials/head.njk", {}, {cache: theme.cache.enable}) }}
+        <title>{{ config.title }}</title>
+    </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
+    <body itemscope itemtype="http://schema.org/WebPage">
 
-    <h2>
-        <a href="/">{{ config.title }}</a> |
-        <a href="/">Home</a> |
-        <a href="/{{ config.archive_dir }}">Archive</a>
-    </h2>
+        <h2>
+            <a href="/">{{ config.title }}</a> |
+            <a href="/">Home</a> |
+            <a href="/{{ config.archive_dir }}">Archive</a>
+        </h2>
 
 
-    <h3>Categories</h3>
-    <ul>
-        {%- for category in site.categories.toArray() %}
-            <li>
-                <a herf="/{{ category.path }}">{{ category.name }}</a>
-            </li>
-        {%- endfor %}
-    </ul>
+        <h3>Categories</h3>
+        <ul>
+            {%- for category in site.categories.toArray() %}
+                <li>
+                    <a herf="/{{ category.path }}">{{ category.name }}</a>
+                </li>
+            {%- endfor %}
+        </ul>
 
-    <h3>Tags</h3>
-    <ul>
-        {%- for tag in site.tags.toArray() %}
-            <li>
-                <a herf="/{{ tag.path }}">{{ tag.name }}</a>
-            </li>
-        {%- endfor %}
-    </ul>
-
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">BUTTON</button>
-
-    <!-- Accent-colored raised button with ripple -->
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-    Button
-    </button>
+        <h3>Tags</h3>
+        <ul>
+            {%- for tag in site.tags.toArray() %}
+                <li>
+                    <a herf="/{{ tag.path }}">{{ tag.name }}</a>
+                </li>
+            {%- endfor %}
+        </ul>
     
     <br />
 
     {% block content %}{% endblock %}
 
-</body>
+    </body>
 
 </html>
