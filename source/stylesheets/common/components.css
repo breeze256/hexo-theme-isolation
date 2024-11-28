@@ -1,0 +1,18 @@
+body {
+    display: block;
+    background-color: #F5F5F5;
+    z-index: -1;
+}
+
+@media screen and (min-width: 1025px) {
+    .site-drawer {
+        position: fixed;
+        z-index: 1;
+        padding-top: 24px;
+        padding-bottom: 12px;
+        box-shadow: none;
+        background: none;
+        border: none;
+    }
+}
+
