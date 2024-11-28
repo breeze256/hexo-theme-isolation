@@ -1,0 +1,8 @@
+body {
+    background-color: #F5F5F5;
+}
+
+span.site-title {
+    text-transform: uppercase;
+    font-weight: 500 !important;
+}
