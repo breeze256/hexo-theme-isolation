@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
 
+    <!-- HTML head, contains style files. -->
     <head>
         {{ partial("_partials/head.njk", {}, {cache: theme.cache.enable}) }}
         <title>{{ config.title }}</title>
     </head>
 
-    <body itemscope itemtype="http://schema.org/WebPage">
+    <body class="components">
 
-        <h2>
-            <a href="/">{{ config.title }}</a> |
-            <a href="/">Home</a> |
-            <a href="/{{ config.archive_dir }}">Archive</a>
-        </h2>
+        <!-- Image preloader. For faster image loading. -->
+        <div class="image-preloader"></div>
 
+        <div class="mdl-layout__container">
+            <!-- No header, and the drawer stays open on larger screens. -->
+            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+                <!-- Drawer layout. -->
+                <div class="mdl-layout__drawer">
+                    <span class="mdl-layout-title">{{ config.title }}</span>
+                    <nav class="mdl-navigation">
+                        <!-- Home link. -->
+                        <a class="mdl-navigation__link" href="/">
+                            <i class="material-icons mdl-list__item-icon">home</i>
+                            Home
+                        </a>
+                        <!-- Archives link. -->
+                        <a class="mdl-navigation__link" href="/archives">
+                            <i class="material-icons mdl-list__item-icon">archives</i>
+                            Archives
+                        </a>
+                        <!-- Link. -->
+                        <a class="mdl-navigation__link" href="">
+                            <i class="material-icons">link</i>
+                            Link
+                        </a>
+                        <!-- Link. -->
+                        <a class="mdl-navigation__link" href="">
+                            <i class="material-icons">link</i>
+                            Link
+                        </a>
+                    </nav>
+                </div>
 
-        <h3>Categories</h3>
-        <ul>
-            {%- for category in site.categories.toArray() %}
-                <li>
-                    <a herf="/{{ category.path }}">{{ category.name }}</a>
-                </li>
-            {%- endfor %}
-        </ul>
+                <!-- Main content. -->
+                <main class="mdl-layout__content">
+                    <div class="page-content">{% block content %}{% endblock %}</div>
+                </main>
 
-        <h3>Tags</h3>
-        <ul>
-            {%- for tag in site.tags.toArray() %}
-                <li>
-                    <a herf="/{{ tag.path }}">{{ tag.name }}</a>
-                </li>
-            {%- endfor %}
-        </ul>
-    
-    <br />
-
-    {% block content %}{% endblock %}
-
+            </div>
+        </div>
     </body>
 
 </html>
