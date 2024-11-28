@@ -13,15 +13,16 @@
         <div class="image-preloader"></div>
 
         <div class="mdl-layout__container">
-            <!-- No header, and the drawer stays open on larger screens. -->
+            <!-- No header, and the drawer stays open on larger screens.
+                 We use this fixed drawer for convience and better mobile performance. -->
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
-                <!-- Drawer layout. -->
+                <!-- Drawer layout. This part can be seen as "header". -->
                 <div class="mdl-layout__drawer site-drawer">
-                    <!-- Title. -->
+                    <!-- Site title. -->
                     <span class="mdl-layout-title">
                         {{ config.title }}
                     </span>
-                    <!-- Navigation. -->
+                    <!-- Site navigation. -->
                     <nav class="mdl-navigation">
                         <!-- Home link. -->
                         <a class="mdl-navigation__link" href="/">
