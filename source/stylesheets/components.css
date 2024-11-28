@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/**
+ * components.css - Web components in hexo-theme-flat.
+ * @version v1.0.0
+ * @license MIT
+ * @copyright 2024 breeze256
+ */
+
+/* ==========================================================================
+   Site drawer: Applied for header usage.
+   ========================================================================== */
+@media screen and (min-width: 1025px) {
+    .site-drawer {
+        position: fixed;
+        z-index: 1;
+        padding-top: 24px;
+        padding-bottom: 12px;
+        box-shadow: none;
+        background: none;
+        border: none;
+    }
+}
+
+/* ==========================================================================
+   Page content: Container for main content.
+   ========================================================================== */
+.page-content {
+    padding: 10px;
+}
