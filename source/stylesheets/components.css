@@ -41,8 +41,11 @@
    ========================================================================== */
 @media screen and (min-width: 1025px) {
     .content__container {
-        padding: 50px 50px 10px 100px;
         margin-left: 0px !important;
-        width: 850px;
+        width: 70%;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 10px;
+        padding-right: 30px;
     }
 }
