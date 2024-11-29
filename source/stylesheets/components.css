@@ -32,7 +32,8 @@
         padding-left: 80px;
         padding-right: 80px;
         margin-left: auto;
-        margin-right: auto
+        margin-right: auto;
+        box-sizing: border-box;
     }
 }
 
@@ -46,6 +47,6 @@
         padding-top: 80px;
         padding-bottom: 80px;
         padding-left: 10px;
-        padding-right: 30px;
+        padding-right: 10px;
     }
 }
