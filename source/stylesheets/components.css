@@ -11,19 +11,37 @@
    ========================================================================== */
 @media screen and (min-width: 1025px) {
     .site-drawer {
-        position: fixed;
+        position: relative;
         z-index: 1;
-        padding-top: 24px;
-        padding-bottom: 12px;
+        padding: 114px 40px 40px 52px;
         box-shadow: none;
         background: none;
         border: none;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .site-layout {
+        display: flex;
+        gap: 0px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        max-width: 1328px;
+        padding-left: 80px;
+        padding-right: 80px;
+        margin-left: auto;
+        margin-right: auto
     }
 }
 
 /* ==========================================================================
-   Page content: Container for main content.
+   Content container: Container for main content.
    ========================================================================== */
-.page-content {
-    padding: 10px;
+@media screen and (min-width: 1025px) {
+    .content__container {
+        padding: 10px;
+        margin-left: 0px !important;
+    }
 }

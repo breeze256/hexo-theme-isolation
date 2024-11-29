@@ -10,7 +10,6 @@
    Body: Set background color and other attributes.
    ========================================================================== */
 body {
-    display: block;
     background-color: #F5F5F5;
     z-index: -1;
 }
