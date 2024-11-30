@@ -13,7 +13,7 @@
     .site-drawer {
         position: relative;
         z-index: 1;
-        padding: 114px 40px 40px 0px;
+        padding: 110px 40px 40px 0px;
         box-shadow: none;
         background: none;
         border: none;
@@ -24,11 +24,10 @@
 @media screen and (min-width: 1025px) {
     .site-layout {
         display: flex;
-        gap: 0px;
         flex-wrap: wrap;
         justify-content: center;
         width: 100%;
-        max-width: 1328px;
+        max-width: 1330px;
         padding-left: 80px;
         padding-right: 80px;
         margin-left: auto;
@@ -44,9 +43,6 @@
     .content__container {
         margin-left: 0px !important;
         width: 70%;
-        padding-top: 80px;
-        padding-bottom: 80px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 80px 10px;
     }
 }

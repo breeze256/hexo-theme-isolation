@@ -1,8 +1,9 @@
-# Assets
+# Custom assets folders. DO NOT EDIT if you don't know what is this.
 assets:
   css: stylesheets
   js: javascripts
   imgs: images
 
+# Allow to cache content generation.
 cache:
   enable: true

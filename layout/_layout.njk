@@ -7,6 +7,7 @@
         <title>{{ config.title }}</title>
     </head>
 
+	<!-- HTML body without header. -->
     <body>
 
         <!-- Image preloader for faster image loading (TODO). -->
@@ -26,28 +27,9 @@
                         {{ config.title }}
                     </span>
 
-                    <!-- Site navigation. Will be defined in navigation.njk (TODO). -->
+                    <!-- Site navigation. Defined in menu.njk. -->
                     <nav class="mdl-navigation">
-                        <!-- Home link. -->
-                        <a class="mdl-navigation__link" href="/">
-                            <i class="material-icons mdl-list__item-icon">home</i>
-                            Home
-                        </a>
-                        <!-- Archives link. -->
-                        <a class="mdl-navigation__link" href="/archives">
-                            <i class="material-icons mdl-list__item-icon">archives</i>
-                            Archives
-                        </a>
-                        <!-- Link. -->
-                        <a class="mdl-navigation__link" href="">
-                            <i class="material-icons">link</i>
-                            Link
-                        </a>
-                        <!-- Link. -->
-                        <a class="mdl-navigation__link" href="">
-                            <i class="material-icons">link</i>
-                            Link
-                        </a>
+                        {%- include "_partials/menu.njk" -%}
                     </nav>
                     
                 </div>
@@ -56,7 +38,6 @@
                 <main class="mdl-layout__content content__container">
                     {% block content %}{% endblock %}
                 </main>
-
 
             </div>
         </div>
