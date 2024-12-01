@@ -14,6 +14,7 @@
         position: relative;
         z-index: 1;
         padding: 110px 40px 40px 0px;
+		width: 340px;
         box-shadow: none;
         background: none;
         border: none;
@@ -25,10 +26,11 @@
     .site-layout {
         display: flex;
         flex-wrap: wrap;
+		gap: 50px;
         justify-content: center;
         width: 100%;
         max-width: 1330px;
-        padding-left: 80px;
+        padding-left: 60px;
         padding-right: 80px;
         margin-left: auto;
         margin-right: auto;
@@ -37,12 +39,30 @@
 }
 
 /* ==========================================================================
+   Site title: The title in the drawer.
+   ========================================================================== */
+.site-title {
+    color: #252B2D;
+	font-size: 25px;
+	font-weight: 300;
+	line-height: 40px;
+}
+
+.site-slogan {
+	color: #5C6A70;
+	padding-left: 40px;
+	line-height: 50px;
+	font-size: 17px;
+	font-weight: 300
+}
+
+/* ==========================================================================
    Content container: Container for main content.
    ========================================================================== */
 @media screen and (min-width: 1025px) {
     .content__container {
         margin-left: 0px !important;
-        width: 70%;
+        width: 60%;
         padding: 80px 10px;
     }
 }
