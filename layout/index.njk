@@ -2,27 +2,27 @@
 
 {% block content %}
 
-    <pre>There is index.njk.</pre>
+	<div class="mdl-grid">
 
-    <h3>Posts</h3>
+		{%- for post in page.posts.toArray() %}
 
-    {%- for post in page.posts.toArray() %}
+			<div class="mdl-color-text--grey-600 mdl-card__supporting-text mdl-shadow--2dp mdl-cell mdl-cell--12-col post-entry">
+				<a href="/{{ post.path }}">{{ post.title }}</a>
+				<br />
+				{{ post.path }}
+				<br />
+				{{ post.slug }}
+				<br />
+				{{ post._id }}
+				<br />
+				{{ post.title }}
+				<br />
+				{{ post.date }}
+			</div>
 
-        <div class="mdl-color-text--grey-600 mdl-card__supporting-text mdl-shadow--2dp">
-            <a href="/{{ post.path }}">{{ post.title }}</a>
-            <br />
-            {{ post.path }}
-            <br />
-            {{ post.slug }}
-            <br />
-            {{ post._id }}
-            <br />
-            {{ post.title }}
-            <br />
-            {{ post.date }}
-        </div>
+		{%- endfor %}
 
-    {%- endfor %}
+	</div>
 
 {% endblock %}
 

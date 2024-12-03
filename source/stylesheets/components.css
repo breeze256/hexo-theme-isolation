@@ -7,14 +7,31 @@
  */
 
 /* ==========================================================================
+   Site layout: The main layout for content.
+   ========================================================================== */
+
+@media screen and (min-width: 1025px) {
+    .site-layout {
+        display: flex;
+        flex-wrap: wrap;
+		gap: 30px;
+        justify-content: center;
+        padding-left: 60px;
+        padding-right: 80px;
+        box-sizing: border-box;
+    }
+}
+
+/* ==========================================================================
    Site drawer: Applied for header usage.
    ========================================================================== */
+
 @media screen and (min-width: 1025px) {
     .site-drawer {
         position: relative;
         z-index: 1;
-        padding: 110px 40px 40px 0px;
-		width: 340px;
+        padding: 120px 40px 40px 0px;
+		width: 330px;
         box-shadow: none;
         background: none;
         border: none;
@@ -22,47 +39,62 @@
     }
 }
 
-@media screen and (min-width: 1025px) {
-    .site-layout {
-        display: flex;
-        flex-wrap: wrap;
-		gap: 50px;
-        justify-content: center;
-        width: 100%;
-        max-width: 1330px;
-        padding-left: 60px;
-        padding-right: 80px;
-        margin-left: auto;
-        margin-right: auto;
-        box-sizing: border-box;
-    }
-}
-
 /* ==========================================================================
    Site title: The title in the drawer.
    ========================================================================== */
+
 .site-title {
     color: #252B2D;
+    line-height: 40px;
+	max-width: fit-content;
 	font-size: 25px;
 	font-weight: 300;
-	line-height: 40px;
 }
 
-.site-slogan {
-	color: #5C6A70;
-	padding-left: 40px;
-	line-height: 50px;
-	font-size: 17px;
-	font-weight: 300
+/* ==========================================================================
+   Site slogan: The solgan in the drawer.
+   ========================================================================== */
+
+@media screen and (min-width: 1025px) {
+	.site-slogan {
+		color: #5C6A70;
+		padding-left: 40px;
+		line-height: 50px;
+		font-size: 17px;
+		font-weight: 300
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.site-slogan {
+		color: #5C6A70;
+		padding-left: 16px;
+		line-height: 50px;
+		font-size: 15px;
+		font-weight: 300
+	}
 }
 
 /* ==========================================================================
    Content container: Container for main content.
    ========================================================================== */
+
 @media screen and (min-width: 1025px) {
-    .content__container {
+    .content-container {
         margin-left: 0px !important;
         width: 60%;
         padding: 80px 10px;
     }
 }
+
+/* ==========================================================================
+   Post entry: A paper card for each posts.
+   ========================================================================== */
+
+.post-entry {
+	width: 100%;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+
