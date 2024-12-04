@@ -1,20 +1,16 @@
-<!-- Home link. -->
-<a class="mdl-navigation__link" href="/">
-    <i class="material-icons mdl-list__item-icon">home</i>
-    Home
-</a>
-<!-- Archives link. -->
-<a class="mdl-navigation__link" href="/archives">
-    <i class="material-icons mdl-list__item-icon">archives</i>
-    Archives
-</a>
-<!-- Link. -->
-<a class="mdl-navigation__link" href="">
-    <i class="material-icons">link</i>
-    Link
-</a>
-<!-- Link. -->
-<a class="mdl-navigation__link" href="">
-    <i class="material-icons">link</i>
-    Link
-</a>
+<!-- Home item. -->
+{%- if theme.menu.home.enable %}
+	<a class="mdl-navigation__link" href={{ theme.menu.home.path }}>
+		<i class="material-icons mdl-list__item-icon">home</i>
+		{{ theme.menu.home.name }}
+	</a>
+{%- endif %}
+
+<!-- Archives item. -->
+{%- if theme.menu.archives.enable %}
+	<a class="mdl-navigation__link" href={{ theme.menu.archives.path }}>
+		<i class="material-icons mdl-list__item-icon">archives</i>
+		{{ theme.menu.archives.name }}
+	</a>
+{%- endif %}
+
