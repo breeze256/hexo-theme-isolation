@@ -17,7 +17,7 @@
 		gap: 30px;
         justify-content: center;
         padding-left: 60px;
-        padding-right: 80px;
+        padding-right: 60px;
         box-sizing: border-box;
     }
 }
@@ -98,3 +98,11 @@
 	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
 
+/* ==========================================================================
+   Post content: The main content of post.
+   ========================================================================== */
+
+.post-content {
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
