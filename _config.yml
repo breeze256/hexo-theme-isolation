@@ -1,16 +1,16 @@
 # User Interface configuration.
 uiux:
-  slogan: "「自由的风终会吹动木讷的树」"
+  slogan: "This is a slogan!"
 
 # Site menu & navigation.
 menu:
   home:
     enable: true
-    name: "主页"
+    name: "Home"
     path: "/"
   archives: 
     enable: true
-    name: "归档"
+    name: "Archives"
     path: "/archives"
 
 # Custom assets folders. DO NOT EDIT if you don't know what is this.
