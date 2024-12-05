@@ -126,6 +126,16 @@
    Content container: Container for main content.
    ========================================================================== */
 
+.content-container {
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.content-container::-webkit-scrollbar {
+    display: none;
+}
+
 @media screen and (min-width: 1025px) {
     .content-container {
         margin-left: 0px !important;
