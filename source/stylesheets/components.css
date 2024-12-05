@@ -147,7 +147,7 @@
 }
 
 .post-entry--content {
-	padding: 20px;
+	padding: 40px;
 }
 
 /* ==========================================================================
@@ -157,6 +157,7 @@
 @media screen and (min-width: 1025px) {
     .post-content {
         background-color: #FFFFFF;
+        padding: 40px;
         box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
         -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
     }
