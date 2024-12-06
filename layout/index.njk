@@ -8,17 +8,16 @@
 
 			<div class="mdl-color-text--grey-600 mdl-card__supporting-text mdl-shadow--2dp mdl-cell mdl-cell--12-col post-entry">
 				<div class="post-entry--content">
-					<a href="/{{ post.path }}">{{ post.title }}</a>
+					<p class="post-entry--title">
+						<a href="/{{ post.path }}">{{ post.title }}</a>
+					</p>
+					PATH: {{ post.path }}
 					<br />
-					{{ post.path }}
+					SLUG: {{ post.slug }}
 					<br />
-					{{ post.slug }}
+					ID: {{ post._id }}
 					<br />
-					{{ post._id }}
-					<br />
-					{{ post.title }}
-					<br />
-					{{ post.date }}
+					DATE: {{ post.date }}
 				</div>
 			</div>
 

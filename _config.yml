@@ -1,5 +1,11 @@
+# Flat for Hexo configuration.
+
+# Allow to cache content generation.
+cache:
+  enable: true
+
 # User Interface configuration.
-uiux:
+interface:
   slogan: "This is a slogan!"
 
 # Site menu & navigation.
@@ -8,17 +14,19 @@ menu:
     enable: true
     name: "Home"
     path: "/"
+  # TODO.
   archives: 
     enable: true
     name: "Archives"
     path: "/archives"
+
+# Author's information. TODO.
+# author:
+#   avatar: ""
+#   sign: ""
 
 # Custom assets folders. DO NOT EDIT if you don't know what is this.
 assets:
   css: stylesheets
   js: javascripts
   imgs: images
-
-# Allow to cache content generation.
-cache:
-  enable: true
