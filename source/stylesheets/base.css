@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**
  * base.css - Web basic style in hexo-theme-flat.
- * @version v1.0.0
+ * @version v1.1.0
  * @license MIT
  * @copyright 2024 breeze256
  */
@@ -11,7 +11,7 @@
    ========================================================================== */
 
 body, html {
-	font-family: Roboto, "Noto Sans CJK SC", "Helvetica", Arial, sans-serif;
+	font-family: Roboto, "Noto Sans SC", "Helvetica", Arial, sans-serif;
     background-color: #F5F5F5;
     z-index: -1;
 }

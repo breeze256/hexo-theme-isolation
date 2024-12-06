@@ -14,4 +14,23 @@ development and try out some new things.
 
 ## Quick Start
 
+It is recommended to install the theme via node,
 
+```bash
+npm install --save hexo-theme-flat
+```
+
+Or, you can install the theme manually,
+
+```bash
+git clone https://github.com/breeze256/hexo-theme-flat.git ./themes/flat
+```
+
+Once you install the theme, change the default theme in your `_config.yml`.
+
+```yaml
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: flat
+```
