@@ -30,3 +30,7 @@ assets:
   css: stylesheets
   js: javascripts
   imgs: images
+
+# Output style of hexo-renderer-dartsass.
+sass:
+  outputStyle: expanded # "expanded" or "compressed".

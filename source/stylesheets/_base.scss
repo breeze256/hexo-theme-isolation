@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * base.css - Web basic style in hexo-theme-flat.
  * @version v1.2.0
@@ -6,13 +5,15 @@
  * @copyright 2024 breeze256
  */
 
+@use "_library/palette" as *;
+
 /* ==========================================================================
    Body: Set background color and other attributes.
    ========================================================================== */
 
 body, html {
 	font-family: Roboto, "Noto Sans SC", "Helvetica", Arial, sans-serif;
-    background-color: #F5F5F5;
+    background-color: $primary-bg-color;
     z-index: -1;
 }
 
@@ -25,8 +26,8 @@ pre, kbd {
    ========================================================================== */
 
 .highlight {
-	background: #F1F3F4;
-	color: #37474F;
+	background: $code-bg-color;
+	color: $code-fg-color;
 	margin: 16px 0;
 	padding: 0 10px;
 }

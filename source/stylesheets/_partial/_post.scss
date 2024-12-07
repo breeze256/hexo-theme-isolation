@@ -1,0 +1,46 @@
+/* _post.scss */
+
+/* ==========================================================================
+   Post entry: A paper card for each posts.
+   ========================================================================== */
+
+.post-entry {
+	width: 100%;
+	border-radius: 2px;
+    background-color: #FFFFFF;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+    margin-bottom: 20px;
+}
+
+.post-entry--content {
+	padding: 40px;
+}
+
+.post-entry--title a {
+    font-weight: 300;
+	font-size: 32px;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Post content: The main content of post.
+   ========================================================================== */
+
+@media screen and (min-width: 1025px) {
+    .post-content {
+        background-color: #FFFFFF;
+        padding: 40px;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .post-content {
+        background-color: #FFFFFF;
+        padding: 2.8rem;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+    }
+}

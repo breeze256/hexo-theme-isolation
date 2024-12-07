@@ -1,0 +1,47 @@
+/* _layout.scss */
+
+/* ==========================================================================
+   Site layout: The main layout for content.
+   ========================================================================== */
+
+@media screen and (min-width: 1025px) {
+    .site-layout {
+        display: flex;
+		flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-left: 60px;
+        padding-right: 60px;
+		max-width: 1340px;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+	.site-layout {
+        padding: 4.3rem 1.1rem;
+        box-sizing: border-box;
+	}
+}
+
+/* ==========================================================================
+   Content container: Container for main content.
+   ========================================================================== */
+
+.content-container {
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.content-container::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (min-width: 1025px) {
+    .content-container {
+        margin-left: 0px !important;
+        width: 60%;
+        padding: 80px 10px;
+    }
+}

@@ -1,0 +1,83 @@
+/* _drawer.scss */
+
+@use "../_library/palette" as *;
+
+/* ==========================================================================
+   Site drawer: Applied for header usage.
+   ========================================================================== */
+
+@media screen and (min-width: 1025px) {
+    .site-drawer {
+        position: relative;
+        z-index: 1;
+        padding: 120px 40px 40px 0px;
+		width: 330px;
+        box-shadow: none;
+        background: none;
+        border: none;
+    }
+}
+
+/* ==========================================================================
+   Site title: The title in the drawer.
+   ========================================================================== */
+
+@media screen and (min-width: 1025px) {
+    .site-title {
+        color: #252B2D;
+        line-height: 40px;
+        font-size: 25px;
+        font-weight: 300;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .site-title {
+        color: #252B2D;
+        line-height: 2.8rem;
+        padding-top: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+}
+
+/* ==========================================================================
+   Site slogan: The solgan in the drawer.
+   ========================================================================== */
+
+@media screen and (min-width: 1025px) {
+	.site-slogan {
+		color: #5C6A70;
+		padding-left: 40px;
+		line-height: 50px;
+		font-size: 17px;
+		font-weight: 300
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.site-slogan {
+		color: #5C6A70;
+		padding-left: 1.2rem;
+		line-height: 3.6rem;
+		font-size: 1.2rem;
+		font-weight: 300
+	}
+}
+
+/* ==========================================================================
+   Drawer HR: The dividing line in the drawer.
+   ========================================================================== */
+
+@media screen and (min-width: 1025px) {
+	.drawer-hr {
+		color: #BDBDBD;
+        margin: 1em 200px 1em 40px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.drawer-hr {
+		color: #BDBDBD;
+	}
+}
