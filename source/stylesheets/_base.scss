@@ -6,25 +6,21 @@
  */
 
 @use "_library/palette" as *;
+@use "_library/font" as *;
 
-/* ==========================================================================
-   Body: Set background color and other attributes.
-   ========================================================================== */
-
+// Body style.
 body, html {
-	font-family: Roboto, "Noto Sans SC", "Helvetica", Arial, sans-serif;
+	font-family: $primary-font;
     background-color: $primary-bg-color;
     z-index: -1;
 }
 
+// Code style.
 pre, kbd {
-	font-family: "Roboto Mono", monospace;
+	font-family: $code-font;
 }
 
-/* ==========================================================================
-   Highlight: Code highlight style.
-   ========================================================================== */
-
+// Code block.
 .highlight {
 	background: $code-bg-color;
 	color: $code-fg-color;
@@ -32,13 +28,10 @@ pre, kbd {
 	padding: 0 10px;
 }
 
-/* ==========================================================================
-   Title: H1, H2, etc.
-   ========================================================================== */
-
+// Title.
 h1 {
 	font-weight: 700;
-	font-family: Roboto, "Noto Sans SC", "Helvetica", Arial, sans-serif;
+	font-family: $primary-font;
 }
 
 h2 {

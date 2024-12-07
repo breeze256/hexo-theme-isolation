@@ -1,12 +1,14 @@
 /**
- * main.sass - Web basic style in hexo-theme-flat.
+ * Basic style files for hexo-theme-flat.
  * @version v1.2.0
  * @license MIT
  * @copyright 2024 breeze256
  */
 
+// Base layout.
 @use "_base";
 
+// Partial components.
 @use "_partial/layout";
 @use "_partial/drawer";
 @use "_partial/post";
