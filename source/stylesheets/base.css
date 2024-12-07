@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**
  * base.css - Web basic style in hexo-theme-flat.
- * @version v1.1.0
+ * @version v1.2.0
  * @license MIT
  * @copyright 2024 breeze256
  */
@@ -18,4 +18,30 @@ body, html {
 
 pre, kbd {
 	font-family: "Roboto Mono", monospace;
+}
+
+/* ==========================================================================
+   Highlight: Code highlight style.
+   ========================================================================== */
+
+.highlight {
+	background: #F1F3F4;
+	color: #37474F;
+	margin: 16px 0;
+	padding: 0 10px;
+}
+
+/* ==========================================================================
+   Title: H1, H2, etc.
+   ========================================================================== */
+
+h1 {
+	font-weight: 700;
+	font-family: Roboto, "Noto Sans SC", "Helvetica", Arial, sans-serif;
+}
+
+h2 {
+	font-size: 40px;
+	border-bottom: 1px solid #eae8ed;
+	padding: 0 0 3px;
 }
