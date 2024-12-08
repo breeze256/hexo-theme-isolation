@@ -1,4 +1,8 @@
-/* _post.scss */
+/**
+ * post.scss - Post entry and content style in hexo-theme-flat.
+ * @license MIT
+ * @copyright 2024 breeze256
+ */
 
 /* ==========================================================================
    Post entry: A paper card for each posts.
@@ -27,20 +31,15 @@
    Post content: The main content of post.
    ========================================================================== */
 
-@media screen and (min-width: 1025px) {
-    .post-content {
-        background-color: #FFFFFF;
+.post-content {
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+    @media screen and (min-width: 1025px) {
         padding: 40px;
-        box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
-        -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+    }
+    @media screen and (max-width: 1024px) {
+        padding: 2.8rem;
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .post-content {
-        background-color: #FFFFFF;
-        padding: 2.8rem;
-        box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
-        -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
-    }
-}

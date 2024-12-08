@@ -1,6 +1,5 @@
 /**
- * base.css - Web basic style in hexo-theme-flat.
- * @version v1.2.0
+ * _base.scss - Web basic style in hexo-theme-flat.
  * @license MIT
  * @copyright 2024 breeze256
  */
@@ -15,19 +14,6 @@ body, html {
     z-index: -1;
 }
 
-// Code style.
-pre, kbd {
-	font-family: $code-font;
-}
-
-// Code block.
-.highlight {
-	background: $code-bg-color;
-	color: $code-fg-color;
-	margin: 16px 0;
-	padding: 0 10px;
-}
-
 // Title.
 h1 {
 	font-weight: 700;
@@ -36,6 +22,6 @@ h1 {
 
 h2 {
 	font-size: 40px;
-	border-bottom: 1px solid #eae8ed;
+	border-bottom: 1px solid #EAE8ED;
 	padding: 0 0 3px;
 }
