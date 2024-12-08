@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-flat",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A Hexo theme aims to isolate your focus onto writing.",
   "main": "package.json",
   "files": [
@@ -31,7 +31,6 @@
     "hexo-renderer-markdown-it": "7.1.1",
     "js-yaml": "4.1.0",
     "mocha": "10.8.2",
-    "stylelint": "16.10.0",
-    "stylelint-stylus": "1.0.0"
+    "stylelint": "16.10.0"
   }
 }
