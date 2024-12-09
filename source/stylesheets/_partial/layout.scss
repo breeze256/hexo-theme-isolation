@@ -10,6 +10,7 @@
 
 .site-layout {
     box-sizing: border-box;
+    margin: auto;
     @media screen and (min-width: 1025px) {
         display: flex;
 		flex-direction: row;
