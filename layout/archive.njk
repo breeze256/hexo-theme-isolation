@@ -2,9 +2,25 @@
 
 {% block content %}
 
-    <div class="mdl-color-text--grey-700 mdl-card__supporting-text post-content">
-		<h1>Archives</h1>
-		This is archives page and is under development.
-	</div>
+	{% set archivesList = list_archives({
+		show_count: false,
+		format: 'YYYY-MM'
+	}) %}
+
+	{% if not is_year() %}
+
+		<div class="mdl-color-text--grey-700 mdl-card__supporting-text post-content">
+			<h1>Archives</h1>
+
+			{% if archivesList %}
+				<p>
+					<h2>Timeline</h2>
+					{{ archivesList | safe }}
+				</p>
+			{% endif %}
+		</div>
+
+	{% endif %}
 
 {% endblock %}
+
