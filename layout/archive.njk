@@ -1,5 +1,7 @@
 {% extends "_layout.njk" %}
 
+<!-- IN DEVELOPMENT. -->
+
 {% block content %}
 
 	{% set archivesList = list_archives({
@@ -17,6 +19,10 @@
 					<h2>Timeline</h2>
 					{{ archivesList | safe }}
 				</p>
+			{% else %}
+				{%- for post in page.posts.toArray() %}
+					{%- include '_partials/post-entry.njk' -%}
+				{%- endfor %}
 			{% endif %}
 		</div>
 
