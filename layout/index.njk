@@ -3,13 +3,9 @@
 {% block content %}
 
 	<div class="mdl-grid">
-
 		{%- for post in page.posts.toArray() %}
-
 			{%- include '_partials/post-entry.njk' -%}
-
 		{%- endfor %}
-
 	</div>
 
 {% endblock %}

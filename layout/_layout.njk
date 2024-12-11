@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
 
-    <!-- HTML head, it contains style files and site information. -->
-    <head>
-        {{ partial("_partials/head.njk", {}, {cache: theme.cache.enable}) }}
-        <title>{{ config.title }}</title>
-    </head>
+  <!-- HTML head, it contains style files and site information. -->
 
-	<!-- HTML body without header. -->
-    <body>
+  <head>
+    {{ partial("_partials/head.njk", {}, {cache: theme.cache.enable}) }}
+    <title>
+      {{ config.title }}
+    </title>
+  </head>
 
-        <!-- Image preloader for faster image loading (TODO). -->
-        <div class="image-preloader"></div>
+  <!-- HTML body without header. -->
 
-        <!-- No header, and the drawer stays open on larger screens.
-            We use this fixed drawer for convience and better mobile performance. -->
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer site-layout">
-         
-            <!-- Drawer layout. This part can be seen as "header". -->
-            <div class="mdl-layout__drawer site-drawer">
+  <body>
 
-                <!-- Site title in drawer. -->
-                <span class="mdl-layout-title site-title">
-                    {{ config.title }}
-                </span>
+    <!-- Image preloader for faster image loading (TODO). -->
+    <div class="image-preloader"></div>
 
-				<p class="site-slogan">
-					{{ theme.interface.slogan }}
-				</p>
-                    
-                <!-- Dividing line in the drawer. -->
-                <hr class="drawer-hr"></hr>
+    <!-- No header, and the drawer stays open on larger screens.
+              We use this fixed drawer for convience and better mobile performance. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer site-layout">
 
-                <!-- Site navigation. Defined in menu.njk. -->
-                <nav class="mdl-navigation">
-                    {%- include "_partials/menu.njk" -%}
-                </nav>
-                    
-            </div>
+      <!-- Drawer layout. This part can be seen as "header". -->
+      <div class="mdl-layout__drawer site-drawer">
 
-            <!-- Main content, extended in specific pages. -->
-            <main class="mdl-layout__content content-container">
-                {% block content %}{% endblock %}
-            </main>
+        <!-- Site title in drawer. -->
+        <span class="mdl-layout-title site-title">
+          {{ config.title }}
+        </span>
 
-        </div>
-    </body>
+        <p class="site-slogan">
+          {{ theme.interface.slogan }}
+        </p>
+
+        <!-- Dividing line in the drawer. -->
+        <hr class="drawer-hr">
+        </hr>
+
+        <!-- Site navigation. Defined in menu.njk. -->
+        <nav class="mdl-navigation">
+          {%- include "_partials/menu.njk" -%}
+        </nav>
+
+      </div>
+
+      <!-- Main content, extended in specific pages. -->
+      <main class="mdl-layout__content content-container">
+        {% block content %}{% endblock %}
+      </main>
+
+    </div>
+  </body>
 
 </html>

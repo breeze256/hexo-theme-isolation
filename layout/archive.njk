@@ -1,32 +1,33 @@
 {% extends "_layout.njk" %}
 
-<!-- IN DEVELOPMENT. -->
-
+<!-- Add basic archives layout. -->
 {% block content %}
 
-	{% set archivesList = list_archives({
+  <!-- Archives preferences. -->
+  {% set archivesList = list_archives({
 		show_count: false,
 		format: 'YYYY-MM'
 	}) %}
 
-	{% if not is_year() %}
-
-		<div class="mdl-color-text--grey-700 mdl-card__supporting-text post-content">
-			<h1>Archives</h1>
-
-			{% if archivesList %}
-				<p>
-					<h2>Timeline</h2>
-					{{ archivesList | safe }}
-				</p>
-			{% else %}
-				{%- for post in page.posts.toArray() %}
-					{%- include '_partials/post-entry.njk' -%}
-				{%- endfor %}
-			{% endif %}
-		</div>
-
-	{% endif %}
+  <!-- Main layout. -->
+  {%- if not is_year() %}
+    <!-- Archives list page. -->
+    {%- if archivesList %}
+      <div class="mdl-color-text--grey-700 mdl-card__supporting-text post-content">
+        <h1>Archives</h1>
+				{{ archivesList | safe }}
+    {%- endif %}
+  <!-- Date index page. -->
+  {%- else %}
+	  <div class="mdl-grid">
+      <div class="mdl-color-text--grey-600 mdl-card__supporting-text mdl-shadow--2dp mdl-cell mdl-cell--12-col post-entry">
+        <h1 class="archives--title">{{ page.year }}/{{ page.month }}</h1>
+      </div>
+		  {%- for post in page.posts.toArray() %}
+			  {%- include '_partials/post-entry.njk' -%}
+		  {%- endfor %}
+	  </div>
+  {%- endif %}
 
 {% endblock %}
 

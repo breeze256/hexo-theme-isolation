@@ -1,0 +1,15 @@
+/**
+ * archives.scss - Drawer style for flat.
+ * @license MIT
+ * @copyright 2024 breeze256
+ */
+
+@use "../_library/palette.scss" as *;
+@use "../_library/font.scss" as *;
+
+// The title in the date page.
+.archives--title {
+  padding-left: 40px;
+  color: $primary-fg-color;
+  font-family: $code-font;
+}
