@@ -1,0 +1,53 @@
+/* palette.scss */
+
+$dark-scheme: "dark-scheme";
+
+$schemes: (
+  $light-scheme: (
+    // Primary color is for main content, like posts and pages.
+    $primary-fg-color: #616161,
+    $primary-bg-color: #F5F5F5,
+
+    // The color for code block.
+    $code-fg-color: #37474F,
+    $code-bg-color: #F1F3F4,
+
+    // MISC color.
+    $title-color: #252B2D,
+    $slogan-color: #5C6A70,
+    $hr-color: #BDBDBD,
+  ),
+  $dark-scheme: (
+    // Primary color is for main content, like posts and pages.
+    $primary-fg-color: #616161,
+    $primary-bg-color: #F5F5F5,
+
+    // The color for code block.
+    $code-fg-color: #37474F,
+    $code-bg-color: #F1F3F4,
+
+    // MISC color.
+    $title-color: #252B2D,
+    $slogan-color: #5C6A70,
+    $hr-color: #BDBDBD,
+  )
+);
+
+@mixin themeProperty($theme, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties) {
+  @if $additionalPropertiesPositionIsFront {
+    #{$property}: unquote($additionalProperties + ' ' + map-get($theme, $color));
+  } @else {
+    #{$property}: unquote(map-get($theme, $color) + ' ' + $additionalProperties);
+  }
+}
+
+@mixin theme($property, $color, $additionalPropertiesPositionIsFront: false, $additionalProperties: '') {
+  $light: map-get($themes, $light-theme);
+  $dark: map-get($themes, $dark-theme);
+
+  @include themeProperty($light, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+
+  @media (prefers-color-scheme: dark) {
+    @include themeProperty($dark, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+  }
+}
