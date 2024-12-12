@@ -10,8 +10,14 @@
 // Body style.
 body, html {
 	font-family: $primary-font;
-	background-color: $primary-bg-color;
-	z-index: -1;
+  z-index: -1;
+	// background-color: $primary-bg-color;
+
+  @include apply-primary(light-scheme);
+  @media (prefers-color-scheme: dark) {
+    @include apply-primary(dark-scheme);
+  }
+
 }
 
 // Title.
@@ -24,4 +30,19 @@ h2 {
 	font-size: 40px;
 	border-bottom: 1px solid #EAE8ED;
 	padding: 0 0 3px;
+}
+
+// MDL Part.
+.mdl-list__item-icon.material-icons {
+  @include apply-primary(light-scheme);
+  @media (prefers-color-scheme: dark) {
+    @include apply-primary(dark-scheme);
+  }
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+  @include apply-primary(light-scheme);
+  @media (prefers-color-scheme: dark) {
+    @include apply-primary(dark-scheme);
+  }
 }

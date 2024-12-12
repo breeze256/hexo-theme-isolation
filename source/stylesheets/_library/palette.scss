@@ -1,16 +1,50 @@
 /* palette.scss */
-
-// Primary color is for main content, like posts and pages.
-$primary-fg-color: #616161;
-$primary-bg-color: #F5F5F5;
-
-// The color for code block.
-$code-fg-color: #37474F;
-$code-bg-color: #F1F3F4;
-
-// MISC color.
-$title-color: #252B2D;
-$slogan-color: #5C6A70;
+@use "sass:map";
 $hr-color: #BDBDBD;
 
+$schemes: (
+  light-scheme: (
+    // Primary color is for main content, like posts and pages.
+    primary-fg-color: #616161,
+    primary-bg-color: #F5F5F5,
 
+    // Card color.
+    card-fg-color: #616161,
+    card-bg-color: #FFFFFF,
+
+    // MISC color.
+    title-color: #252B2D,
+    slogan-color: #5C6A70,
+
+  ),
+  dark-scheme: (
+    // Primary color is for main content, like posts and pages.
+    primary-fg-color: #FAFAFA,
+    primary-bg-color: #252525,
+    
+    // Card color.
+    card-fg-color: #F5F5F5,
+    card-bg-color: #212121,
+
+    // MISC color.
+    title-color: #EEEEEE,
+    slogan-color: #ECEFF1,
+
+  )
+);
+
+@mixin apply-primary($scheme) {
+  $primary-fg-color: map.get(map.get($schemes, $scheme), primary-fg-color);
+  $primary-bg-color: map.get(map.get($schemes, $scheme), primary-bg-color);
+
+  background-color: $primary-bg-color;
+  color: $primary-fg-color;
+}
+
+@mixin apply-card($scheme) {
+  $card-fg-color: map.get(map.get($schemes, $scheme), card-fg-color);
+  $card-bg-color: map.get(map.get($schemes, $scheme), card-bg-color);
+
+  background-color: $card-bg-color;
+  color: $card-fg-color;
+}

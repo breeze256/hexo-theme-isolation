@@ -1,6 +1,6 @@
 <!-- Home item. -->
 {%- if theme.menu.home.enable %}
-  <a class="mdl-navigation__link" href={{ theme.menu.home.path }}>
+  <a class="mdl-navigation__link site-menu" href={{ theme.menu.home.path }}>
 	  <i class="material-icons mdl-list__item-icon">home</i>
 	  {{ theme.menu.home.name }}
   </a>
@@ -8,7 +8,7 @@
 
 <!-- Archives item. -->
 {%- if theme.menu.archives.enable %}
-  <a class="mdl-navigation__link" href={{ theme.menu.archives.path }}>
+  <a class="mdl-navigation__link site-menu" href={{ theme.menu.archives.path }}>
     <i class="material-icons mdl-list__item-icon">archives</i>
     {{ theme.menu.archives.name }}
   </a>
