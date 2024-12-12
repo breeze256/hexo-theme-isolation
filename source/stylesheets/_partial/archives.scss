@@ -11,10 +11,4 @@
 .archives--title {
   padding-left: 40px;
   font-family: $code-font;
-
-  @include apply-primary(light-scheme);
-  @media (prefers-color-scheme: dark) {
-    @include apply-primary(dark-scheme);
-  }
-
 }

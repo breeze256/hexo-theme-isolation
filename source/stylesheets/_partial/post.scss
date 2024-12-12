@@ -5,6 +5,7 @@
  */
 
 @use "../_library/palette" as *;
+@use "sass:map";
 
 /* ==========================================================================
    Post entry: A paper card for each posts.
@@ -16,9 +17,12 @@
 	box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
 	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
   margin-bottom: 20px;
-  @include apply-card(light-scheme);
+  // background-color: $primary-bg-color;
+  color: map.get(map.get($schemes, light-scheme), card-fg-color);
+  background-color: map.get(map.get($schemes, light-scheme), card-bg-color);
   @media (prefers-color-scheme: dark) {
-    @include apply-card(dark-scheme);
+    color: map.get(map.get($schemes, dark-scheme), card-fg-color);
+    background-color: map.get(map.get($schemes, dark-scheme), card-bg-color);
   }
 }
 
@@ -41,9 +45,12 @@
   -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
   max-width: -moz-available;
   max-width: -webkit-fill-available;
-  @include apply-card(light-scheme);
+  // background-color: $primary-bg-color;
+  color: map.get(map.get($schemes, light-scheme), card-fg-color);
+  background-color: map.get(map.get($schemes, light-scheme), card-bg-color);
   @media (prefers-color-scheme: dark) {
-    @include apply-card(dark-scheme);
+    color: map.get(map.get($schemes, dark-scheme), card-fg-color);
+    background-color: map.get(map.get($schemes, dark-scheme), card-bg-color);
   }
   @media screen and (min-width: 1025px) {
     padding: 40px;

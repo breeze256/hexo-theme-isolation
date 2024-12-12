@@ -3,6 +3,7 @@
 $hr-color: #BDBDBD;
 
 $schemes: (
+  // Light scheme.
   light-scheme: (
     // Primary color is for main content, like posts and pages.
     primary-fg-color: #616161,
@@ -17,6 +18,7 @@ $schemes: (
     slogan-color: #5C6A70,
 
   ),
+  // Dark scheme.
   dark-scheme: (
     // Primary color is for main content, like posts and pages.
     primary-fg-color: #FAFAFA,
@@ -32,19 +34,3 @@ $schemes: (
 
   )
 );
-
-@mixin apply-primary($scheme) {
-  $primary-fg-color: map.get(map.get($schemes, $scheme), primary-fg-color);
-  $primary-bg-color: map.get(map.get($schemes, $scheme), primary-bg-color);
-
-  background-color: $primary-bg-color;
-  color: $primary-fg-color;
-}
-
-@mixin apply-card($scheme) {
-  $card-fg-color: map.get(map.get($schemes, $scheme), card-fg-color);
-  $card-bg-color: map.get(map.get($schemes, $scheme), card-bg-color);
-
-  background-color: $card-bg-color;
-  color: $card-fg-color;
-}
