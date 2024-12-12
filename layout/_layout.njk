@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
-
   <!-- HTML head, it contains style files and site information. -->
   <head>
     {{ partial("_partials/head.njk", {}, {cache: theme.cache.enable}) }}
@@ -15,7 +14,7 @@
     <div class="image-preloader"></div>
 
     <!-- No header, and the drawer stays open on larger screens.
-              We use this fixed drawer for convience and better mobile performance. -->
+      We use this fixed drawer for convience and better mobile performance. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer site-layout">
       <!-- Drawer layout. This part can be seen as "header". -->
       <div class="mdl-layout__drawer site-drawer">
@@ -28,5 +27,4 @@
       </main>
     </div>
   </body>
-
 </html>
