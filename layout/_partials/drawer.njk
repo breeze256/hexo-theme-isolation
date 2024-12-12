@@ -1,0 +1,38 @@
+<!-- Site title in drawer. -->
+<span class="mdl-layout-title site-drawer__title">
+  {{ config.title }}
+</span>
+
+<!-- Site slogan. -->
+<p class="site-drawer__slogan">
+  {{ theme.interface.slogan }}
+</p>
+
+<!-- Dividing line in the drawer. -->
+  <hr class="site-drawer__hr">
+</hr>
+
+<!-- Site navigation. -->
+<nav class="mdl-navigation">
+  {%- if theme.menu.home.enable %}
+    <a class="mdl-navigation__link site-drawer__menu" href={{ theme.menu.home.path }}>
+	    <i class="material-icons mdl-list__item-icon">home</i>
+	    {{ theme.menu.home.name }}
+    </a>
+  {%- endif %}
+
+  <!-- Archives item. -->
+  {%- if theme.menu.archives.enable %}
+    <a class="mdl-navigation__link site-drawer__menu" href={{ theme.menu.archives.path }}>
+      <i class="material-icons mdl-list__item-icon">archives</i>
+      {{ theme.menu.archives.name }}
+    </a>
+  {%- endif %}
+</nav>
+
+<!-- Footer. -->
+<div class="site-drawer__footer">
+  Powered by
+  <a href="https://github.com/breeze256/hexo-theme-flat">
+    Flat theme</a>.
+</div>
