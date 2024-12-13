@@ -8,10 +8,7 @@
 @use "../_library/font" as *;
 @use "sass:map";
 
-/* ==========================================================================
-   Site drawer: Applied for header usage.
-   ========================================================================== */
-
+// Main style.
 .site-drawer {
   @media screen and (min-width: 1025px) {
     position: relative;
@@ -24,10 +21,7 @@
   }
 }
 
-/* ==========================================================================
-   Site title: The title in the drawer.
-   ========================================================================== */
-
+// Drawer & site title.
 .site-drawer__title {
   color: map.get(map.get($schemes, light-scheme), title-color);
   font-weight: 300;
@@ -45,10 +39,7 @@
   }
 }
 
-/* ==========================================================================
-   Site slogan: The solgan in the drawer.
-   ========================================================================== */
-
+// Site slogan.
 .site-drawer__slogan {
   color: map.get(map.get($schemes, light-scheme), slogan-color);;
   font-weight: 300;
@@ -67,10 +58,7 @@
   }
 }
 
-/* ==========================================================================
-   Drawer HR: The dividing line in the drawer.
-   ========================================================================== */
-
+// The dividing line in the drawer.
 .site-drawer__hr {
   color: $hr-color;
   @media screen and (min-width: 1025px) {
@@ -78,7 +66,7 @@
   }
 }
 
-// site-drawer__menu.
+// Drawer menu style.
 .site-drawer__menu {
   color: map.get(map.get($schemes, light-scheme), title-color);
   @media (prefers-color-scheme: dark) {
@@ -86,7 +74,7 @@
   }
 }
 
-// footer.
+// Drawer footer.
 .site-drawer__footer {
   font-family: $code-font;
   position: absolute;

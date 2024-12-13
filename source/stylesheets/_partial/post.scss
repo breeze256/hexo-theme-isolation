@@ -7,10 +7,7 @@
 @use "../_library/palette" as *;
 @use "sass:map";
 
-/* ==========================================================================
-   Post entry: A paper card for each posts.
-   ========================================================================== */
-
+// Entry style.
 .post-entry {
 	width: 100%;
 	border-radius: 2px;
@@ -26,20 +23,19 @@
   }
 }
 
+// Content in the entry.
 .post-entry__content {
 	padding: 40px;
 }
 
+// Title in the entry.
 .post-entry__title a {
   font-weight: 300;
 	font-size: 32px;
   text-decoration: none;
 }
 
-/* ==========================================================================
-   Post content: The main content of post.
-   ========================================================================== */
-
+// Post content.
 .post-content {
   box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
   -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);

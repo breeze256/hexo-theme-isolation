@@ -4,10 +4,7 @@
  * @copyright 2024 breeze256
  */
 
-/* ==========================================================================
-   Site layout: The main layout for content.
-   ========================================================================== */
-
+// Main layout.
 .site-layout {
     box-sizing: border-box;
     margin: auto;
@@ -26,10 +23,7 @@
     }
 }
 
-/* ==========================================================================
-   Content container: Container for main content.
-   ========================================================================== */
-
+// Container.
 .content-container {
     overflow: auto;
     scrollbar-width: none;

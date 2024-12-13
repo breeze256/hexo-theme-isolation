@@ -21,7 +21,7 @@
   {%- else %}
 	  <div class="mdl-grid">
       <div class="mdl-card__supporting-text mdl-shadow--2dp mdl-cell mdl-cell--12-col post-entry">
-        <h1 class="archives--title">{{ page.year }}/{{ page.month }}</h1>
+        <h1 class="archives__title">{{ page.year }}/{{ page.month }}</h1>
       </div>
 		  {%- for post in page.posts.toArray() %}
 			  {%- include '_partials/post-entry.njk' -%}

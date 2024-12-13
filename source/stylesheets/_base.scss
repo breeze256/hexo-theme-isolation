@@ -21,6 +21,14 @@ body, html {
   }
 }
 
+// Accent color.
+a {
+  color: map.get(map.get($schemes, light-scheme), accent-fg-color);
+  @media (prefers-color-scheme: dark) {
+    color: map.get(map.get($schemes, dark-scheme), accent-fg-color);
+  }
+}
+
 // Title.
 h1 {
 	font-weight: 700;
@@ -45,5 +53,12 @@ h2 {
   color: map.get(map.get($schemes, light-scheme), primary-fg-color);
   @media (prefers-color-scheme: dark) {
     color: map.get(map.get($schemes, dark-scheme), primary-fg-color);
+  }
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+  background-color: map.get(map.get($schemes, light-scheme), accent-bg-color);
+  @media (prefers-color-scheme: dark) {
+    background-color: map.get(map.get($schemes, dark-scheme), accent-bg-color);
   }
 }

@@ -9,6 +9,10 @@ $schemes: (
     primary-fg-color: #616161,
     primary-bg-color: #F5F5F5,
 
+    // Accent color.
+    accent-fg-color: #00796b,
+    accent-bg-color: #e0f2f1,
+
     // Card color.
     card-fg-color: #616161,
     card-bg-color: #FFFFFF,
@@ -16,21 +20,19 @@ $schemes: (
     // MISC color.
     title-color: #252B2D,
     slogan-color: #5C6A70,
-
   ),
   // Dark scheme.
   dark-scheme: (
-    // Primary color is for main content, like posts and pages.
-    primary-fg-color: #FAFAFA,
-    primary-bg-color: #252525,
-    
-    // Card color.
-    card-fg-color: #F5F5F5,
-    card-bg-color: #212121,
+    primary-fg-color: #B0BEC5,
+    primary-bg-color: #263238,
 
-    // MISC color.
-    title-color: #EEEEEE,
-    slogan-color: #ECEFF1,
+    accent-fg-color: #4db6ac,
+    accent-bg-color: #314549,
 
+    card-fg-color: #EEFFFF,
+    card-bg-color: #1E272C,
+
+    title-color: #FFFFFF,
+    slogan-color: #B0BEC5,
   )
 );
