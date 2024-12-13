@@ -2,11 +2,23 @@
 
 {% block content %}
 
-	<div class="mdl-grid">
+  <!-- Posts list. -->
+  <div class="mdl-grid">
 		{%- for post in page.posts.toArray() %}
 			{%- include '_partials/post-entry.njk' -%}
 		{%- endfor %}
 	</div>
+
+  <!-- A temporary paginator. -->
+  {%- if page.total > 1 %}
+    <nav class="mdl-cell mdl-cell--12-col">
+      {{ paginator({
+          prev_text: __('LAST PAGE  '),
+          next_text: __('  NEXT PAGE'),
+          space: '|'
+      }) }}
+    </nav>
+  {%- endif %}
 
 {% endblock %}
 
