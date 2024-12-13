@@ -31,8 +31,12 @@ a {
 
 // Title.
 h1 {
-	font-weight: 700;
+	font-weight: 300;
 	font-family: $primary-font;
+  color: map.get(map.get($schemes, light-scheme), accent-fg-color);
+  @media (prefers-color-scheme: dark) {
+    color: map.get(map.get($schemes, dark-scheme), accent-fg-color);
+  }
 }
 
 h2 {
