@@ -1,38 +1,62 @@
 /* palette.scss */
 @use "sass:map";
-$hr-color: #BDBDBD;
 
 $schemes: (
   // Light scheme.
-  light-scheme: (
-    // Primary color is for main content, like posts and pages.
-    primary-fg-color: #616161,
-    primary-bg-color: #F5F5F5,
+  LightScheme: (
+    // Primary color shades.
+    md-primary-fg-color:               hsla(200, 18%, 46%, 1),
+    md-primary-fg-color--light:        hsla(200, 15%, 54%, 1),
+    md-primary-fg-color--dark:         hsla(199, 18%, 33%, 1),
+    md-primary-bg-color:               hsla(0, 0%, 96%, 1),
+    md-primary-bg-color--light:        hsla(0, 0%, 96%, 0.7),
 
-    // Accent color.
-    accent-fg-color: #00796b,
-    accent-bg-color: #e0f2f1,
+    // Default color shades.
+    md-default-fg-color:               hsla(0, 0%, 0%, 0.65),
+    md-default-fg-color--light:        hsla(0, 0%, 0%, 0.54),
+    md-default-fg-color--lighter:      hsla(0, 0%, 0%, 0.32),
+    md-default-fg-color--lightest:     hsla(0, 0%, 0%, 0.07),
+    md-default-bg-color:               hsla(0, 0%, 100%, 1),
+    md-default-bg-color--light:        hsla(0, 0%, 100%, 0.7),
+    md-default-bg-color--lighter:      hsla(0, 0%, 100%, 0.3),
+    md-default-bg-color--lightest:     hsla(0, 0%, 100%, 0.12),
 
-    // Card color.
-    card-fg-color: #616161,
-    card-bg-color: #FFFFFF,
-
-    // MISC color.
-    title-color: #252B2D,
-    slogan-color: #5C6A70,
+    // Accent color shades.
+    md-accent-fg-color:                hsla(199, 18%, 33%, 1),
+    md-accent-fg-color--transparent:   hsla(199, 18%, 33%, 0.1),
+    md-accent-bg-color:                hsla(0, 0%, 100%, 1),
+    md-accent-bg-color--light:         hsla(0, 0%, 100%, 0.7),
   ),
   // Dark scheme.
-  dark-scheme: (
-    primary-fg-color: #B0BEC5,
-    primary-bg-color: #263238,
+  DarkScheme: (
+    // Primary color shades.
+    md-primary-fg-color:               hsla(174, 42%, 51%, 1),
+    md-primary-fg-color--light:        hsla(165, 82%, 51%, 1),
+    md-primary-fg-color--dark:         hsla(173, 100%, 24%, 1),
+    md-primary-bg-color:               hsla(200, 19%, 18%, 1),
+    md-primary-bg-color--light:        hsla(200, 19%, 18%, 0.7),
 
-    accent-fg-color: #4db6ac,
-    accent-bg-color: #314549,
+    // Default color shades.
+    md-default-fg-color:               hsla(180, 100%, 97%, 0.87),
+    md-default-fg-color--light:        hsla(180, 100%, 97%, 0.54),
+    md-default-fg-color--lighter:      hsla(180, 100%, 97%, 0.32),
+    md-default-fg-color--lightest:     hsla(180, 100%, 97%, 0.07),
+    md-default-bg-color:               hsla(201, 19%, 15%, 1),
+    md-default-bg-color--light:        hsla(201, 19%, 15%, 0.7),
+    md-default-bg-color--lighter:      hsla(201, 19%, 15%, 0.3),
+    md-default-bg-color--lightest:     hsla(201, 19%, 15%, 0.12),
 
-    card-fg-color: #EEFFFF,
-    card-bg-color: #1E272C,
-
-    title-color: #FFFFFF,
-    slogan-color: #B0BEC5,
+    // Accent color shades.
+    md-accent-fg-color:                hsla(165, 82%, 51%, 1),
+    md-accent-fg-color--transparent:   hsla(165, 82%, 51%, 0.1),
+    md-accent-bg-color:                hsla(200, 19%, 18%, 1),
+    md-accent-bg-color--light:         hsla(200, 19%, 18%, 0.7),
   )
 );
+
+@mixin use-color($property, $colorKey) {
+  & {#{$property}: map.get(map.get($schemes, LightScheme), $colorKey);}
+  @media (prefers-color-scheme: dark) {
+    #{$property}: map.get(map.get($schemes, DarkScheme), $colorKey);
+  }
+}

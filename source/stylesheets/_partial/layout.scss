@@ -6,34 +6,34 @@
 
 // Main layout.
 .site-layout {
-    box-sizing: border-box;
-    margin: auto;
+  box-sizing: border-box;
+  margin: auto;
     
-    @media screen and (min-width: 1025px) {
-      display: flex;
-		  flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: center;
-      padding-left: 60px;
-      padding-right: 60px;
-		  max-width: 1340px;
-    }
-    @media screen and (max-width: 1024px) {
-      padding: 4.3rem 1.1rem;
-    }
+  @media screen and (min-width: 1025px) {
+    display: flex;
+		flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-left: 60px;
+    padding-right: 60px;
+		max-width: 1340px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 4.3rem 1.1rem;
+  }
 }
 
 // Container.
 .content-container {
-    overflow: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    @media screen and (min-width: 1025px) {
-      margin-left: 0px !important;
-      width: 65%;
-      padding: 80px 10px;
-    }
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media screen and (min-width: 1025px) {
+    margin-left: 0px !important;
+    width: 65%;
+    padding: 80px 10px;
+  }
 }

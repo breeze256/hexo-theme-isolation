@@ -5,6 +5,7 @@
  */
 
 @use "../_library/palette" as *;
+@use "../_library/font.scss" as *;
 @use "sass:map";
 
 // Entry style.
@@ -15,12 +16,8 @@
 	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
   margin-bottom: 20px;
   // background-color: $primary-bg-color;
-  color: map.get(map.get($schemes, light-scheme), card-fg-color);
-  background-color: map.get(map.get($schemes, light-scheme), card-bg-color);
-  @media (prefers-color-scheme: dark) {
-    color: map.get(map.get($schemes, dark-scheme), card-fg-color);
-    background-color: map.get(map.get($schemes, dark-scheme), card-bg-color);
-  }
+  @include use-color("color", "md-default-fg-color");
+  @include use-color("background-color", "md-default-bg-color");
 }
 
 // Content in the entry.
@@ -31,8 +28,10 @@
 // Title in the entry.
 .post-entry__title a {
   font-weight: 300;
+  font-family: $primaryFonts;
 	font-size: 32px;
   text-decoration: none;
+  @include use-color("color", "md-primary-fg-color");
 }
 
 // Post content.
@@ -41,18 +40,13 @@
   -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
   max-width: -moz-available;
   max-width: -webkit-fill-available;
-  // background-color: $primary-bg-color;
-  color: map.get(map.get($schemes, light-scheme), card-fg-color);
-  background-color: map.get(map.get($schemes, light-scheme), card-bg-color);
-  @media (prefers-color-scheme: dark) {
-    color: map.get(map.get($schemes, dark-scheme), card-fg-color);
-    background-color: map.get(map.get($schemes, dark-scheme), card-bg-color);
-  }
   @media screen and (min-width: 1025px) {
     padding: 40px;
   }
   @media screen and (max-width: 1024px) {
     padding: 2.8rem;
   }
+  @include use-color("color", "md-default-fg-color");
+  @include use-color("background-color", "md-default-bg-color");
 }
 

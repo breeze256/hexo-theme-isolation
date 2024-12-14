@@ -8,35 +8,25 @@
 @use "_library/font" as *;
 @use "sass:map";
 
-// Body style.
+// Body part.
 body, html {
-	font-family: $primary-font;
+  font-family: $primaryFonts;
   z-index: -1;
+  @include use-color("color", "md-default-fg-color");
+  @include use-color("background-color", "md-primary-bg-color");
 	// background-color: $primary-bg-color;
-  color: map.get(map.get($schemes, light-scheme), primary-fg-color);
-  background-color: map.get(map.get($schemes, light-scheme), primary-bg-color);
-  @media (prefers-color-scheme: dark) {
-    color: map.get(map.get($schemes, dark-scheme), primary-fg-color);
-    background-color: map.get(map.get($schemes, dark-scheme), primary-bg-color);
-  }
 }
 
 // Accent color.
 a {
-  color: map.get(map.get($schemes, light-scheme), accent-fg-color);
-  @media (prefers-color-scheme: dark) {
-    color: map.get(map.get($schemes, dark-scheme), accent-fg-color);
-  }
+  @include use-color("color", "md-primary-fg-color");
 }
 
 // Title.
 h1 {
+  font-family: $primaryFonts;
 	font-weight: 300;
-	font-family: $primary-font;
-  color: map.get(map.get($schemes, light-scheme), accent-fg-color);
-  @media (prefers-color-scheme: dark) {
-    color: map.get(map.get($schemes, dark-scheme), accent-fg-color);
-  }
+  @include use-color("color", "md-primary-fg-color");
 }
 
 h2 {
@@ -45,24 +35,16 @@ h2 {
 	padding: 0 0 3px;
 }
 
-// MDL Part.
+// We just change some necessary elements in Material Design Lite.
 .mdl-list__item-icon.material-icons {
-  color: map.get(map.get($schemes, light-scheme), primary-fg-color);
-  @media (prefers-color-scheme: dark) {
-    color: map.get(map.get($schemes, dark-scheme), primary-fg-color);
-  }
+  @include use-color("color", "md-default-fg-color--light");
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
-  color: map.get(map.get($schemes, light-scheme), primary-fg-color);
-  @media (prefers-color-scheme: dark) {
-    color: map.get(map.get($schemes, dark-scheme), primary-fg-color);
-  }
+  @include use-color("color", "md-default-fg-color--light");
+  font-family: $codeFonts;
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
-  background-color: map.get(map.get($schemes, light-scheme), accent-bg-color);
-  @media (prefers-color-scheme: dark) {
-    background-color: map.get(map.get($schemes, dark-scheme), accent-bg-color);
-  }
+  @include use-color("background-color", "md-accent-fg-color--transparent");
 }
