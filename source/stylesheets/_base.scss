@@ -40,8 +40,8 @@ h2 {
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
-  @include use-color("color", "md-default-fg-color--light");
   font-family: $codeFonts;
+  @include use-color("color", "md-default-fg-color--light");
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {

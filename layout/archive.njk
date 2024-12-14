@@ -27,6 +27,16 @@
 			  {%- include '_partials/post-entry.njk' -%}
 		  {%- endfor %}
 	  </div>
+    <!-- A temporary paginator. -->
+    {%- if page.total > 1 %}
+      <nav class="mdl-cell mdl-cell--12-col">
+        {{ paginator({
+            prev_text: __('LAST PAGE  '),
+            next_text: __('  NEXT PAGE'),
+            space: '|'
+        }) }}
+      </nav>
+    {%- endif %}
   {%- endif %}
 
 {% endblock %}

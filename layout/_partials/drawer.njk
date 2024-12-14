@@ -28,6 +28,14 @@
       {{ theme.menu.archives.name }}
     </a>
   {%- endif %}
+
+  <!-- About page. -->
+  {%- if theme.menu.about.enable %}
+    <a class="mdl-navigation__link site-drawer__menu" href={{ theme.menu.about.path }}>
+      <i class="material-icons mdl-list__item-icon">info</i>
+      {{ theme.menu.about.name }}
+    </a>
+  {%- endif %}
 </nav>
 
 <!-- Footer. -->

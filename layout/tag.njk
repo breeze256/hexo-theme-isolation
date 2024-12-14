@@ -1,0 +1,28 @@
+{% extends "_layout.njk" %}
+
+<!-- Add basic archives layout. -->
+{% block content %}
+
+  <!-- Main layout. -->
+	<div class="mdl-grid">
+    <div class="mdl-card__supporting-text mdl-shadow--2dp mdl-cell mdl-cell--12-col post-entry">
+      <h1 class="archives__title">{{ page.tag }}</h1>
+    </div>
+		{%- for post in page.posts.toArray() %}
+			{%- include '_partials/post-entry.njk' -%}
+		{%- endfor %}
+	</div>
+
+  <!-- A temporary paginator. -->
+  {%- if page.total > 1 %}
+    <nav class="mdl-cell mdl-cell--12-col">
+      {{ paginator({
+          prev_text: __('LAST PAGE  '),
+          next_text: __('  NEXT PAGE'),
+          space: '|'
+      }) }}
+    </nav>
+  {%- endif %}
+
+{% endblock %}
+

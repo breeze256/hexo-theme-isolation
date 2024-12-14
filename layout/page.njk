@@ -1,0 +1,11 @@
+{% extends "_layout.njk" %}
+
+<!-- The page layout. -->
+{% block content %}
+	<div class="mdl-card__supporting-text post-content">
+    <!-- Post title. -->
+		<h1>{{ page.title }}</h1>
+    <!-- Post content. -->
+		{{ page.content }}
+	</div>
+{% endblock %}

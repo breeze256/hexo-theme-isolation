@@ -14,11 +14,18 @@ menu:
     enable: true
     name: "Home"
     path: "/"
-  # TODO.
   archives: 
     enable: true
     name: "Archives"
     path: "/archives"
+  tags: 
+    enable: true
+    name: "Tags"
+    path: "/tags"
+  about: 
+    enable: true
+    name: "About"
+    path: "/about"
 
 # Author's information. TODO.
 # author:
