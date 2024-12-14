@@ -34,6 +34,17 @@ h2 {
 	padding: 0 0 3px;
 }
 
+// Figure.
+figure {
+  max-width: 100%
+}
+
+// Figure caption.
+figcaption {
+  font-family: $codeFonts;
+  text-align: center;
+}
+
 // We just change some necessary elements in Material Design Lite.
 .mdl-list__item-icon.material-icons {
   @include use-color("color", "md-default-fg-color--light");
