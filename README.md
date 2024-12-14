@@ -1,6 +1,6 @@
 # Flat for Hexo
 
-> Please be aware that this theme is still WORK IN PROGRESS.
+> 1.5.0 is the first version to be relatively available.
 
 Flat for Hexo theme is a light and simple theme based on
 [Material Design Lite](https://getmdl.io/). Its code is easy to read and easy
@@ -46,6 +46,26 @@ cp node_modules/hexo-theme-flat/_config.yml _config.flat.yml
 # Now you can configure the theme.
 vim _config.flat.yml
 ```
+
+## Necessary packages
+
+This theme uses SASS to be used as a CSS preprocessor, so you may need a SASS renderer. 
+
+And an excerpt plugin is also recommended,
+
+* `hexo-renderer-dartsass`
+* `hexo-excerpt`
+
+You may want to remove some renderers that you no longer need,
+
+* `hexo-renderer-stylus`
+* `hexo-renderer-ejs`
+
+And I recommend using
+
+* `hexo-renderer-markdown-it`
+
+instead of `hexo-renderer-marked`.
 
 ## Highlighting
 

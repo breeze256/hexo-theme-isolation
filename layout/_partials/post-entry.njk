@@ -9,10 +9,10 @@
     <p>...<a href="/{{ post.path }}">Read more</a></p>
     <!-- Other information. -->
     <hr>
-      Categories: {{ list_categories(post.categories, {
+    <pre>Categories: {{ list_categories(post.categories, {
         show_count: false,
         style: 'false',
         separator: '  '
-        }) }}
+      }) }}</pre>
 	</div>
 </div>

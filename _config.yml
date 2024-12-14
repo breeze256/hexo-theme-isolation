@@ -6,7 +6,7 @@ cache:
 
 # User Interface configuration.
 interface:
-  slogan: "This is a slogan!"
+  slogan: "Write your own slogan."
 
 # Site menu & navigation.
 menu:
@@ -18,12 +18,8 @@ menu:
     enable: true
     name: "Archives"
     path: "/archives"
-  tags: 
-    enable: true
-    name: "Tags"
-    path: "/tags"
   about: 
-    enable: true
+    enable: false
     name: "About"
     path: "/about"
 

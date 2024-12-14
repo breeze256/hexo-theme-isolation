@@ -6,20 +6,24 @@
     <!-- Post title. -->
 		<h1>{{ page.title }}</h1>
     <!-- Author area. TODO -->
-    <pre>AUTHOR AREA (TODO).</pre>
-    <p>
-      Tags: {{ list_tags(page.tags, {
-      show_count: false,
-      style: 'false',
-      separator: '  '
-      }) }} &nbsp
-      Categories: {{ list_categories(page.categories, {
-      show_count: false,
-      style: 'false',
-      separator: '  '
-      }) }}
-    </p>
+    <pre> Tags: {{ list_tags(page.tags, {
+        show_count: false,
+        style: 'false',
+        separator: '  '
+      }) }} Categories: {{ list_categories(page.categories, {
+        show_count: false,
+        style: 'false',
+        separator: '  '
+      }) }} </pre>
     <!-- Post content. -->
 		{{ page.content }}
+    <!-- Post footer. -->
+    <pre>Last updated: {{ 
+      page.updated.year() 
+    }}/{{ 
+      page.updated.month() 
+    }}/{{ 
+      page.updated.day() }}
+    </pre>
 	</div>
 {% endblock %}
