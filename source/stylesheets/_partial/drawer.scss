@@ -18,6 +18,9 @@
     background: none;
     border: none;
   }
+  @media screen and (max-width: 1024px) {
+    @include use-color("background-color", "md-default-bg-color");
+  }
 }
 
 // Drawer & site title.

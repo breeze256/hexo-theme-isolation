@@ -58,3 +58,7 @@ figcaption {
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
   @include use-color("background-color", "md-accent-fg-color--transparent");
 }
+
+.mdl-layout__drawer-button {
+  @include use-color("color", "md-default-fg-color--light");
+}
