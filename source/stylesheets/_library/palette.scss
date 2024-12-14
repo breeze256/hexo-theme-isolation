@@ -54,6 +54,7 @@ $schemes: (
   )
 );
 
+// Mixin for better dark mode.
 @mixin use-color($property, $colorKey) {
   & {#{$property}: map.get(map.get($schemes, LightScheme), $colorKey);}
   @media (prefers-color-scheme: dark) {
