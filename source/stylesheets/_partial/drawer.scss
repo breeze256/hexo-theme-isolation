@@ -55,6 +55,12 @@
   @include use-color("color", "md-default-fg-color--light");
 }
 
+.site-drawer__loading-tip {
+  padding-left: 40px;
+  font-family: $codeFonts;
+  @include use-color("color", "md-default-fg-color--light");
+}
+
 // The dividing line in the drawer.
 .site-drawer__hr {
   @media screen and (min-width: 1025px) {

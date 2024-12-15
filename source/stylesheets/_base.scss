@@ -45,6 +45,22 @@ figcaption {
   text-align: center;
 }
 
+// Blockquote.
+blockquote::before {
+  display: none;
+}
+
+blockquote::after {
+  display: none;
+}
+
+blockquote {
+  font-family: serif, $primaryFonts;
+  margin-left: 0px;
+  padding-left: 30px;
+  border-left: rgba(0,0,0,.1) 5px solid;
+}
+
 // We just change some necessary elements in Material Design Lite.
 .mdl-list__item-icon.material-icons {
   @include use-color("color", "md-default-fg-color--light");
