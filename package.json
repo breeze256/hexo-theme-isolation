@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-flat",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "A Hexo theme aims to isolate your focus onto writing.",
   "main": "package.json",
   "files": [
@@ -28,7 +28,6 @@
     "chai": "4.5.0",
     "eslint": "9.14.0",
     "hexo": "7.3.0",
-    "hexo-renderer-markdown-it": "7.1.1",
     "js-yaml": "4.1.0",
     "mocha": "10.8.2",
     "stylelint": "16.10.0"
