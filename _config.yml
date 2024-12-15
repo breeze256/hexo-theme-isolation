@@ -10,18 +10,9 @@ interface:
 
 # Site menu & navigation.
 menu:
-  home:
-    enable: true
-    name: "Home"
-    path: "/"
-  archives: 
-    enable: true
-    name: "Archives"
-    path: "/archives"
+  home: "/"
+  archives: "/archives"
   about: 
-    enable: false
-    name: "About"
-    path: "/about"
 
 # Author's information. TODO.
 # author:

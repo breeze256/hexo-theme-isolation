@@ -20,26 +20,26 @@
 
 <!-- Site navigation (menu). -->
 <nav class="mdl-navigation">
-  {%- if theme.menu.home.enable %}
-    <a class="mdl-navigation__link site-drawer__menu" href={{ theme.menu.home.path }}>
+  {%- if theme.menu.home %}
+    <a class="mdl-navigation__link site-drawer__menu" href={{ theme.menu.home }}>
 	    <i class="material-icons mdl-list__item-icon">home</i>
-	    {{ theme.menu.home.name }}
+	    {{ __("menu.home") }}
     </a>
   {%- endif %}
 
   <!-- Archives item. -->
-  {%- if theme.menu.archives.enable %}
-    <a class="mdl-navigation__link site-drawer__menu" href={{ theme.menu.archives.path }}>
+  {%- if theme.menu.archives %}
+    <a class="mdl-navigation__link site-drawer__menu" href={{ theme.menu.archives }}>
       <i class="material-icons mdl-list__item-icon">archives</i>
-      {{ theme.menu.archives.name }}
+      {{ __("menu.archives") }}
     </a>
   {%- endif %}
 
   <!-- About page. -->
-  {%- if theme.menu.about.enable %}
-    <a class="mdl-navigation__link site-drawer__menu" href={{ theme.menu.about.path }}>
+  {%- if theme.menu.about %}
+    <a class="mdl-navigation__link site-drawer__menu" href={{ theme.menu.about }}>
       <i class="material-icons mdl-list__item-icon">info</i>
-      {{ theme.menu.about.name }}
+      {{ __("menu.about") }}
     </a>
   {%- endif %}
 </nav>

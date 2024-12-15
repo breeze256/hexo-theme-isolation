@@ -1,0 +1,10 @@
+---
+name: 简体中文
+
+menu:
+  home: 主页
+  archives: 归档
+  about: 关于
+
+post:
+  read_more: 阅读更多

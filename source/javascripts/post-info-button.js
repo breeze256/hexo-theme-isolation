@@ -1,3 +1,3 @@
 document.getElementById("post-info-button").addEventListener("click", function(){
-  alert("您点击了按钮");
+  alert("Button test. This button will be used in future days.");
 });

@@ -6,7 +6,7 @@
 			<a href="/{{ post.path }}">{{ post.title }}</a>
 		</p>
     {{ post.excerpt }}
-    <p>...<a href="/{{ post.path }}">Read more</a></p>
+    <p>...<a href="/{{ post.path }}">{{- __("post.read_more") }}</a></p>
     <!-- Other information. -->
     <hr>
     <pre>Categories: {{ list_categories(post.categories, {
