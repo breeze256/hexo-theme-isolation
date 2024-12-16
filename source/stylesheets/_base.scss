@@ -67,7 +67,6 @@ blockquote {
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
-  font-family: $codeFonts;
   @include use-color("color", "md-default-fg-color--light");
 }
 

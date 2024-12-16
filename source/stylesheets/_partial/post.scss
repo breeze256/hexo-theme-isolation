@@ -49,6 +49,7 @@
   @include use-color("background-color", "md-default-bg-color");
 }
 
+// Information button of the post.
 .post-content__top-button {
   @media screen and (min-width: 1025px) {
     position: absolute;
