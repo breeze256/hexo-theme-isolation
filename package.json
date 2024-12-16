@@ -14,7 +14,10 @@
   "scripts": {
     "test": "mocha test/index.js"
   },
-  "repository": "breeze256/hexo-theme-flat",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breeze256/hexo-theme-flat.git"
+  },
   "keywords": [
     "hexo",
     "theme",
