@@ -1,7 +1,7 @@
 /* font.css */
 
 // Primary fonts for main content.
-$primaryFonts: Roboto, "Helvetica", Arial, -apple-system, sans-serif, "Noto Sans SC";
+$primaryFonts: Roboto, "Helvetica", Arial, -apple-system, sans-serif;
 
 // Code fonts for codeblock (Defined by prismjs).
-$codeFonts: "Roboto Mono", monospace, "Noto Sans SC", -apple-system, sans-serif;
+$codeFonts: "Roboto Mono", monospace, -apple-system, sans-serif;
