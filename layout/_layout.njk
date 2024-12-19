@@ -28,5 +28,7 @@
     </div>
   </body>
   <!-- APlayer. -->
-  {%- include "_partials/aplayer.njk" -%}
+  {%- if theme.aplayer.enable %}
+    {%- include "_partials/aplayer.njk" -%}
+  {%- endif %}
 </html>
