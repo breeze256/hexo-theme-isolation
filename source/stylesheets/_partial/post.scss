@@ -56,4 +56,9 @@
     right: 40px;
     top: 110px;
   }
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+    right: 3.86rem;
+    top: 2.86rem;
+  }
 }

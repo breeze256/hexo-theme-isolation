@@ -6,6 +6,7 @@
 <!-- Site slogan. -->
 <p class="site-drawer__slogan">
   {{ theme.interface.slogan }}
+  </br>
 </p>
 
 <!-- Loading elements. -->
@@ -46,7 +47,15 @@
 
 <!-- Footer. -->
 <div class="site-drawer__footer">
+  {%- if config.feed %}
+<p class="site-drawer__footer__rss">
+  <a class="site-drawer__footer__link" href={{ config.feed.path }}>RSS</a>
+  <span class="iconify" data-icon="mdi-rss-box"></span>
+</p>
+{%- endif %}
   Powered by
-  <a href="https://github.com/breeze256/hexo-theme-flat">
-    Flat theme</a>.
+  <a
+    class="site-drawer__footer__link" 
+    href="https://github.com/breeze256/hexo-theme-flat"
+  >Flat theme</a>.
 </div>

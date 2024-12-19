@@ -81,3 +81,13 @@
   bottom: 5px;
   @include use-color("color", "md-default-fg-color--light");
 }
+
+.site-drawer__footer__link {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.site-drawer__footer__rss {
+  line-height: 14px;
+  @include use-color("color", "md-primary-fg-color");
+}
