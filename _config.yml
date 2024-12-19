@@ -25,6 +25,18 @@ assets:
   js: javascripts
   imgs: images
 
+# Aplayer settings.
+aplayer:
+  enable: true
+  id: 2465890057
+  server: netease
+  type: playlist
+  autoplay: true
+  order: random
+  volume: 0.55
+  theme: #cc543a
+  preload: auto
+
 # Output style of hexo-renderer-dartsass.
 sass:
   outputStyle: expanded # "expanded" or "compressed".
