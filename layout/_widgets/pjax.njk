@@ -1,0 +1,6 @@
+<!-- Pjax area. -->
+<script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+<script>
+  $(document).pjax('a[target!=_blank]', '#pjax-container', {fragment:'#pjax-container', timeout:8000})
+</script>

@@ -25,10 +25,13 @@ assets:
   js: javascripts
   imgs: images
 
+# Pjax switch.
+pjax: true
+
 # Aplayer settings.
 aplayer:
   enable: true
-  id: 2465890057
+  id: 2196136085 # List ID.
   server: netease
   type: playlist
   autoplay: true

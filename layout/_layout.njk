@@ -7,14 +7,15 @@
       {{ config.title }}
     </title>
   </head>
-
+  <!-- Load pjax. -->
+  {%- if theme.pjax %}
+    {%- include "_widgets/pjax.njk" %}
+  {%- endif %}
   <!-- HTML body without header. -->
   <body>
-    <!-- Image preloader for faster image loading (TODO). -->
-    <div class="image-preloader"></div>
     <!-- No header, and the drawer stays open on larger screens.
       We use this fixed drawer for convience and better mobile performance. -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer site-layout">
+    <div id="pjax-container" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer site-layout">
       <!-- Drawer layout. This part can be seen as "header". -->
       <div class="mdl-layout__drawer site-drawer">
         {%- include "_partials/drawer.njk" -%}
@@ -26,7 +27,7 @@
     </div>
     <!-- APlayer. -->
     {%- if theme.aplayer.enable %}
-      {%- include "_partials/aplayer.njk" -%}
+      {%- include "_widgets/aplayer.njk" -%}
     {%- endif %}
   </body>
 </html>
