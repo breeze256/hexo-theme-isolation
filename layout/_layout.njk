@@ -12,7 +12,6 @@
   <body>
     <!-- Image preloader for faster image loading (TODO). -->
     <div class="image-preloader"></div>
-    
     <!-- No header, and the drawer stays open on larger screens.
       We use this fixed drawer for convience and better mobile performance. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer site-layout">
@@ -20,15 +19,14 @@
       <div class="mdl-layout__drawer site-drawer">
         {%- include "_partials/drawer.njk" -%}
       </div>
-
       <!-- Main content, extended in specific pages. -->
       <main class="mdl-layout__content content-container">
         {% block content %}{% endblock %}
       </main>
     </div>
+    <!-- APlayer. -->
+    {%- if theme.aplayer.enable %}
+      {%- include "_partials/aplayer.njk" -%}
+    {%- endif %}
   </body>
-  <!-- APlayer. -->
-  {%- if theme.aplayer.enable %}
-    {%- include "_partials/aplayer.njk" -%}
-  {%- endif %}
 </html>
