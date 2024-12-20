@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
+
   <!-- HTML head, it contains style files and site information. -->
   <head>
     {{ partial("_partials/head.njk", {}, {cache: theme.cache.enable}) }}
-    <title>
-      {{ config.title }}
-    </title>
+    <title>{{ config.title }}</title>
   </head>
+
   <!-- Load pjax. -->
   {%- if theme.pjax %}
-    {%- include "_widgets/pjax.njk" %}
+    {{ partial("_widgets/pjax.njk", {}, {cache: theme.cache.enable}) }}
   {%- endif %}
-  <!-- HTML body without header. -->
+
+  <!-- HTML body. -->
   <body>
-    <!-- No header, and the drawer stays open on larger screens.
-      We use this fixed drawer for convience and better mobile performance. -->
+
+    <!-- No header, and the drawer stays open on larger screens. -->
     <div id="pjax-container" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer site-layout">
+
       <!-- Drawer layout. This part can be seen as "header". -->
       <div class="mdl-layout__drawer site-drawer">
-        {%- include "_partials/drawer.njk" -%}
+        {{ partial("_partials/drawer.njk", {}, {cache: theme.cache.enable}) }}
       </div>
+
       <!-- Main content, extended in specific pages. -->
       <main class="mdl-layout__content content-container">
         {% block content %}{% endblock %}
       </main>
+
     </div>
+
     <!-- APlayer. -->
     {%- if theme.aplayer.enable %}
-      {%- include "_widgets/aplayer.njk" -%}
+      {{ partial("_widgets/aplayer.njk", {}, {cache: theme.cache.enable}) }}
     {%- endif %}
+
   </body>
 </html>

@@ -1,12 +1,14 @@
 <!-- Post entry card. -->
 <div class="mdl-card__supporting-text mdl-shadow--2dp mdl-cell mdl-cell--12-col post-entry">
 	<div class="post-entry__content">
+
     <!-- Entry title. -->
 		<p class="post-entry__title">
 			<a href="/{{ post.path }}">{{ post.title }}</a>
 		</p>
     {{ post.excerpt }}
     <p>...<a href="/{{ post.path }}">{{- __("post.read_more") }}</a></p>
+
     <!-- Other information. -->
     <hr>
     <pre>Categories: {{ list_categories(post.categories, {
@@ -14,5 +16,6 @@
         style: 'false',
         separator: '  '
       }) }}</pre>
+    
 	</div>
 </div>

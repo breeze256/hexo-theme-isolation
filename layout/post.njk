@@ -3,13 +3,16 @@
 {% block content %}
   <!-- Post layout. -->
 	<div class="mdl-card__supporting-text post-content">
+
     <!-- Icon button -->
     <button id="post-info-button" class="mdl-button mdl-js-button mdl-button--icon post-content__top-button">
       <i class="material-icons">info</i>
     </button>
     <script src="{{ url_for(theme.assets.js) }}/post-info-button.js"></script>
+
     <!-- Post title. -->
 		<h1>{{ page.title }}</h1>
+
     <!-- Author area. TODO -->
     <pre> Tags: {{ list_tags(page.tags, {
         show_count: false,
@@ -20,9 +23,12 @@
         style: 'false',
         separator: '  '
       }) }} </pre>
+    
     <!-- {{- toc(page.content) }} -->
+
     <!-- Post content. -->
 		{{ page.content }}
+
     <!-- Post footer. -->
     <pre>Last updated: {{ 
       page.updated.year() 
@@ -31,5 +37,6 @@
     }}/{{ 
       page.updated.day() }}
     </pre>
+    
 	</div>
 {% endblock %}

@@ -2,13 +2,11 @@
 
 <!-- Add basic archives layout. -->
 {% block content %}
-
   <!-- Archives preferences. -->
   {% set archivesList = list_archives({
 		show_count: false,
 		format: 'YYYY-MM'
 	}) %}
-
   <!-- Main layout. -->
   {%- if not is_year() %}
     <!-- Archives list page. -->
@@ -38,6 +36,5 @@
       </nav>
     {%- endif %}
   {%- endif %}
-
 {% endblock %}
 
