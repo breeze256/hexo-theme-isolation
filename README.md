@@ -75,3 +75,32 @@ You should change the default highlighter in your `_config.yml` if you want high
 ``` yaml
 syntax_highlighter: prismjs
 ```
+
+## APlayer
+
+Until now, Flat supports configuring APlayer via MetingJS. See https://github.com/metowolf/MetingJS for details.
+
+``` yaml
+# Aplayer settings.
+aplayer:
+  enable: true
+  id: 2196136085 # List ID.
+  server: netease
+  type: playlist
+  autoplay: true
+  order: random
+  volume: 0.55
+  theme: #cc543a
+  preload: auto
+```
+
+## Pjax
+
+If you want Aplayer to run in the background, open Pjax.
+
+``` yaml
+# Pjax switch.
+pjax: true
+```
+
+You should know that pjax is an experimental option and has **BUGS** in the mobile view.
