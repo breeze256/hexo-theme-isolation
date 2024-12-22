@@ -1,0 +1,1 @@
+# Flat for Hexo Documents
