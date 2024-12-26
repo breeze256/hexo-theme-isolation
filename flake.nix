@@ -2,12 +2,8 @@
   description = "The flake for hexo-theme-flat documentation.";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-24.05";
+    nixpkgs.url = "git+https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs.git?ref=nixos-24.05";
     flake-utils.url = "github:numtide/flake-utils";
-    nix-formatter-pack = {
-      url = "github:Gerschtli/nix-formatter-pack";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
