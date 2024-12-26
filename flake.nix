@@ -1,49 +1,56 @@
 {
-  description = "A mdbook template";
+  description = "The flake for hexo-theme-flat documentation.";
 
   inputs = {
-    utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "nixpkgs/nixos-24.05";
+    flake-utils.url = "github:numtide/flake-utils";
+    nix-formatter-pack = {
+      url = "github:Gerschtli/nix-formatter-pack";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    utils,
-  }:
-    utils.lib.eachDefaultSystem
-    (system: let
-        pkgs = import nixpkgs {inherit system;};
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = import nixpkgs { inherit system; };
         pname = "template";
         version = "0.1.0";
-      in rec
-      {
+      in
+      rec {
         # `nix build`
-        packages.default =
-          pkgs.stdenv.mkDerivation
-          rec {
-            inherit pname version;
+        packages.default = pkgs.stdenv.mkDerivation rec {
+          inherit pname version;
 
-            src = ./.;
+          src = ./.;
 
-            nativeBuildInputs = with pkgs; [
-              mdbook-katex
-              mdbook-mermaid
-              makeWrapper
-            ];
+          nativeBuildInputs = with pkgs; [
+            mdbook-katex
+            mdbook-mermaid
+            makeWrapper
+          ];
 
-            buildPhase = with pkgs; ''
-              ${mdbook-mermaid}/bin/mdbook-mermaid install
-              ${mdbook}/bin/mdbook build
-            '';
+          buildPhase = with pkgs; ''
+            ${mdbook-mermaid}/bin/mdbook-mermaid install
+            ${mdbook}/bin/mdbook build
+          '';
 
-            installPhase = let
+          installPhase =
+            let
               desktop = pkgs.makeDesktopItem {
                 name = pname;
                 desktopName = "My ${pname}";
                 exec = "open-${pname}";
                 icon = "book";
               };
-            in ''
+            in
+            ''
               mkdir -p $out/share/doc/${pname} $out/share/applications $out/share/icons/hicolor/scalable/apps
 
               cp book/favicon.svg $out/share/icons/hicolor/scalable/apps/book.svg
@@ -53,15 +60,13 @@
 
               cp ${desktop}/share/applications/* $out/share/applications
             '';
-          };
+        };
 
         # `nix run`
-        apps.default =
-          utils.lib.mkApp
-          {
-            drv = packages.default;
-            name = "open-${pname}";
-          };
+        apps.default = flake-utils.lib.mkApp {
+          drv = packages.default;
+          name = "open-${pname}";
+        };
 
         # `nix develop`
         devShell = pkgs.mkShell {
@@ -71,5 +76,6 @@
             mdbook
           ];
         };
-      });
+      }
+    );
 }
