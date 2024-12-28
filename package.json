@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-plata",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Hexo theme based on Material Design Lite.",
   "main": "package.json",
   "files": [

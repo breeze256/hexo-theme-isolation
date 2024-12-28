@@ -22,9 +22,9 @@
 </hr>
 
 <!-- Site navigation (menu). -->
-<nav class="mdl-navigation">
+<nav class="mdl-navigation site-drawer__menu">
   {%- if theme.menu.home %}
-    <a class="mdl-navigation__link site-drawer__menu" href={{ theme.menu.home }}>
+    <a class="mdl-navigation__link site-drawer__menu__link" href={{ theme.menu.home }}>
 	    <i class="material-icons mdl-list__item-icon">home</i>
 	    {{ __("menu.home") }}
     </a>
@@ -32,7 +32,7 @@
 
   <!-- Archives item. -->
   {%- if theme.menu.archives %}
-    <a class="mdl-navigation__link site-drawer__menu" href={{ theme.menu.archives }}>
+    <a class="mdl-navigation__link site-drawer__menu__link" href={{ theme.menu.archives }}>
       <i class="material-icons mdl-list__item-icon">archives</i>
       {{ __("menu.archives") }}
     </a>
@@ -40,7 +40,7 @@
 
   <!-- About page. -->
   {%- if theme.menu.about %}
-    <a class="mdl-navigation__link site-drawer__menu" href={{ theme.menu.about }}>
+    <a class="mdl-navigation__link site-drawer__menu__link" href={{ theme.menu.about }}>
       <i class="material-icons mdl-list__item-icon">info</i>
       {{ __("menu.about") }}
     </a>

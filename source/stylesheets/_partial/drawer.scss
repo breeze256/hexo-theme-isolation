@@ -10,10 +10,13 @@
 // Main style.
 .site-drawer {
   @media screen and (min-width: 1025px) {
+    display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 1;
-    padding: 120px 40px 40px 0px;
-	  width: 330px;
+    padding: 120px 40px 0px 0px;
+	  min-width: 330px;
+    min-height: 100vh;
     box-shadow: none;
     background: none;
     border: none;
@@ -70,15 +73,17 @@
 
 // Drawer menu style.
 .site-drawer__menu {
+  flex-grow: 1;
+}
+
+.site-drawer__menu__link {
   @include use-color("color", "md-default-fg-color");
 }
 
 // Drawer footer.
 .site-drawer__footer {
   font-family: $codeFonts;
-  position: fixed;
   padding: 40px;
-  bottom: 5px;
   @include use-color("color", "md-default-fg-color--light");
 }
 

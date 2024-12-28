@@ -16,6 +16,10 @@ body, html {
 	// background-color: $primary-bg-color;
 }
 
+pre, kbd {
+  font-family: $codeFonts;
+}
+
 // Accent color.
 a {
   @include use-color("color", "md-primary-fg-color");
