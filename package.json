@@ -1,7 +1,7 @@
 {
-  "name": "hexo-theme-flat",
-  "version": "1.7.0",
-  "description": "A Hexo theme aims to isolate your focus onto writing.",
+  "name": "hexo-theme-plata",
+  "version": "0.1.0",
+  "description": "A Hexo theme based on Material Design Lite.",
   "main": "package.json",
   "files": [
     "docs",
@@ -16,13 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/breeze256/hexo-theme-flat.git"
+    "url": "git+https://github.com/breeze256/hexo-theme-plata.git"
   },
   "keywords": [
     "hexo",
     "theme",
-    "material",
-    "flat"
+    "material"
   ],
   "author": "breeze256",
   "license": "MIT",
