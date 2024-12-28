@@ -1,10 +1,9 @@
-# Flat for Hexo
+# Plata theme for Hexo
 
-> 1.5.0 is the first version to be relatively available.
+Documentation: https://breeze256.is-local.org/hexo-theme-plata
 
-Flat for Hexo theme is a light and simple theme based on
-[Material Design Lite](https://getmdl.io/). Its code is easy to read and easy
-to be modified.
+Plata theme for Hexo is a light and simple theme based on
+[Material Design Lite](https://getmdl.io/).
 
 The main purpose of developing this theme is for me to learn about front-end 
 development and try out some new things.
