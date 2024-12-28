@@ -15,7 +15,7 @@
       system:
       let
         pkgs = import nixpkgs { inherit system; };
-        pname = "template";
+        pname = "flat-documentation";
         version = "0.1.0";
       in
       rec {
