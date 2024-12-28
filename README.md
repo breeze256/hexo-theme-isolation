@@ -16,13 +16,13 @@ development and try out some new things.
 It is recommended to install the theme via node,
 
 ```bash
-npm install --save hexo-theme-flat
+npm install --save hexo-theme-plata
 ```
 
 Or, you can install the theme manually,
 
 ```bash
-git clone https://github.com/breeze256/hexo-theme-flat.git ./themes/flat
+git clone https://github.com/breeze256/hexo-theme-plata.git ./themes/plata
 ```
 
 Once you install the theme, change the default theme in your `_config.yml`.
@@ -31,19 +31,19 @@ Once you install the theme, change the default theme in your `_config.yml`.
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: flat
+theme: plata
 ```
 
 ## Configuration
 
-It is not recommended to directly modify any files in the flat theme. Because this may cause errors (e.g. merge conflicts), and the modified files may be discarded when upgrading the theme.
+It is not recommended to directly modify any files in the plata theme. Because this may cause errors (e.g. merge conflicts), and the modified files may be discarded when upgrading the theme.
 
 I strongly recommend users to use the Alternate Theme Config to configure the theme.
 
 ``` bash
-cp node_modules/hexo-theme-flat/_config.yml _config.flat.yml
+cp node_modules/hexo-theme-plata/_config.yml _config.plata.yml
 # Now you can configure the theme.
-vim _config.flat.yml
+vim _config.plata.yml
 ```
 
 ## Necessary packages
@@ -68,7 +68,7 @@ instead of `hexo-renderer-marked`.
 
 ## Highlighting
 
-Flat currently only supports prismjs highlighting.
+Plata currently only supports prismjs highlighting.
 You should change the default highlighter in your `_config.yml` if you want highlighting.
 
 ``` yaml
@@ -77,7 +77,7 @@ syntax_highlighter: prismjs
 
 ## APlayer
 
-Until now, Flat supports configuring APlayer via MetingJS. See https://github.com/metowolf/MetingJS for details.
+Until now, Plata supports configuring APlayer via MetingJS. See https://github.com/metowolf/MetingJS for details.
 
 ``` yaml
 # Aplayer settings.
