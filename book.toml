@@ -1,9 +1,9 @@
 [book]
-authors = ["Your Name"]
+authors = ["breeze256"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Template"
+title = "Plata for Hexo Documentation"
 
 [preprocessor.mermaid]
 command = "mdbook-mermaid"

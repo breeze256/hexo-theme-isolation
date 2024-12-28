@@ -1,3 +1,3 @@
-# Documentation for Flat
+# Plata for Hexo Documentation
 
 Built with mdBooks and nix.

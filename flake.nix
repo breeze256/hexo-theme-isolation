@@ -1,5 +1,5 @@
 {
-  description = "The flake for hexo-theme-flat documentation.";
+  description = "The flake for hexo-theme-plata documentation.";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.11";
@@ -15,7 +15,7 @@
       system:
       let
         pkgs = import nixpkgs { inherit system; };
-        pname = "flat-documentation";
+        pname = "plata-theme-documentation";
         version = "0.1.0";
       in
       rec {
