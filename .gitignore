@@ -1,4 +1,3 @@
 node_modules
 *.swp
 *~
-pnpm-lock.yaml
