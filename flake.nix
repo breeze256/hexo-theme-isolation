@@ -11,19 +11,22 @@
       let
         pkgs = import nixpkgs { inherit system; };
         pname = "hexo-theme-plata";
-        version = "0.1.1";
       in
       {
         packages.nodejs = pkgs.nodejs;
         packages.default = self.packages.pnpm;
 
-        devShell =
-          pkgs.mkShell {
-            buildInputs =
-              [
-                pkgs.nodejs
-                pkgs.nodePackages.pnpm
-              ];
-          };
+        devShell = pkgs.mkShell {
+          buildInputs = [
+            pkgs.nodejs
+            pkgs.nodePackages.pnpm
+          ];
+          shellHook = ''
+            export NODE_ENV=development
+            if [ ! -d "node_modules" ]; then
+              pnpm install
+            fi
+          '';
+        };
       });
 }
