@@ -15,7 +15,6 @@
       in
       {
         packages.nodejs = pkgs.nodejs;
-
         packages.default = self.packages.pnpm;
 
         devShell =
