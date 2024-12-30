@@ -24,7 +24,7 @@
       </div>
 
       <!-- Main content, extended in specific pages. -->
-      <main class="mdl-layout__content content-container">
+      <main id="content-container" class="mdl-layout__content content-container">
         {% block content %}{% endblock %}
       </main>
 
@@ -35,5 +35,7 @@
       {{ partial("_widgets/aplayer.njk", {}, {cache: theme.cache.enable}) }}
     {%- endif %}
 
+    <!-- Footer js. -->
+    <script src="{{ url_for(theme.assets.js) }}/waiter.js"></script>
   </body>
 </html>
