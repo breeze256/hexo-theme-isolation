@@ -11,10 +11,10 @@
 body, html {
   font-family: $primaryFonts;
   z-index: -1;
+  overflow: hidden;
   @include use-color("color", "md-default-fg-color");
   @include use-color("background-color", "md-primary-bg-color");
 	// background-color: $primary-bg-color;
-  overflow: hidden;
 }
 
 pre, kbd {
