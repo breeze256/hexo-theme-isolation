@@ -14,6 +14,7 @@ body, html {
   @include use-color("color", "md-default-fg-color");
   @include use-color("background-color", "md-primary-bg-color");
 	// background-color: $primary-bg-color;
+  overflow: hidden;
 }
 
 pre, kbd {

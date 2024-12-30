@@ -25,7 +25,8 @@
 
 // Container.
 .content-container {
-  overflow: hidden;
+  will-change: scroll-position;
+  overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
