@@ -4,7 +4,7 @@
   <!-- HTML head, it contains style files and site information. -->
   <head>
     {{ partial("_partials/head.njk", {}, {cache: theme.cache.enable}) }}
-    <title>{{ config.title }}</title>
+    <title>{{ config.title }} | {{ page.title }}</title>
   </head>
 
   <!-- Load pjax. -->
