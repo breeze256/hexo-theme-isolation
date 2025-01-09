@@ -11,14 +11,13 @@
 
 <!-- Loading elements. -->
 {%- if not theme.pjax %}
-  <p class="site-drawer__loading-tip">
+  {# <p class="site-drawer__loading-tip">
     LOADING...
-  </p>
+  </p> #}
 {%- endif %}
 
 <!-- Dividing line in the drawer. -->
-  <hr class="site-drawer__hr">
-</hr>
+  <hr class="site-drawer__hr"></hr>
 
 <!-- Site navigation (menu). -->
 <nav class="mdl-navigation site-drawer__menu">
@@ -44,6 +43,7 @@
       {{ __("menu.about") }}
     </a>
   {%- endif %}
+
 </nav>
 
 <!-- Footer. -->
