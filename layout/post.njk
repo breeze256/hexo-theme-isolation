@@ -30,13 +30,7 @@
 		{{ page.content }}
 
     <!-- Post footer. -->
-    <pre>Last updated: {{ 
-      page.updated.year() 
-    }}/{{ 
-      page.updated.month() 
-    }}/{{ 
-      page.updated.day() }}
-    </pre>
+    <pre>Last updated: {{ page.updated.format('YYYY-MM-DD') }}</pre>
     
 	</div>
 {% endblock %}
