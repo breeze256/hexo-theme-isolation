@@ -82,3 +82,10 @@ blockquote {
 .mdl-layout__drawer-button {
   @include use-color("color", "md-default-fg-color--light");
 }
+
+.floating-element {
+  z-index: 9999;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
