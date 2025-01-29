@@ -23,7 +23,7 @@
 <nav class="mdl-navigation site-drawer__menu">
   {%- if theme.menu.home %}
     <a class="mdl-navigation__link site-drawer__menu__link" href={{ theme.menu.home }}>
-	    <span class="iconify" data-icon="mdi-home"></span>
+	    <span class="iconify md-24" data-icon="mdi-home"></span>
 	    {{ __("menu.home") }}
     </a>
   {%- endif %}
@@ -31,7 +31,7 @@
   <!-- Archives item. -->
   {%- if theme.menu.archives %}
     <a class="mdl-navigation__link site-drawer__menu__link" href={{ theme.menu.archives }}>
-      <span class="iconify" data-icon="mdi-box-down"></span>
+      <span class="iconify md-24" data-icon="mdi-box-down"></span>
       {{ __("menu.archives") }}
     </a>
   {%- endif %}
@@ -39,7 +39,7 @@
   <!-- About page. -->
   {%- if theme.menu.about %}
     <a class="mdl-navigation__link site-drawer__menu__link" href={{ theme.menu.about }}>
-      <span class="iconify" data-icon="mdi-information-slab-circle"></span>
+      <span class="iconify md-24" data-icon="mdi-information-slab-circle"></span>
       {{ __("menu.about") }}
     </a>
   {%- endif %}
@@ -51,7 +51,7 @@
   {%- if config.feed %}
 <p class="site-drawer__footer__rss">
   <a class="site-drawer__footer__link" href={{ config.feed.path }}>RSS</a>
-  <span class="iconify" data-icon="mdi-rss-box"></span>
+  <span class="iconify md-18" data-icon="mdi-rss-box"></span>
 </p>
 {%- endif %}
   Powered by

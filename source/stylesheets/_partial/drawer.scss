@@ -76,12 +76,6 @@
   flex-grow: 1;
 }
 
-// Resize Iconify icon size.
-.site-drawer__menu .iconify {
-  width: 24px;
-  height: 24px;
-}
-
 .site-drawer__menu__link {
   @include use-color("color", "md-default-fg-color");
 }
